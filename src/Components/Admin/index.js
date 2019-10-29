@@ -6,19 +6,6 @@ class Admin extends Component {
         console.log(e.target);
     }
     state = {
-        events: [
-            {
-                name: "name1",
-                etime: {
-                    hrs: 2,
-                    min: 1,
-                    day: 3
-                },
-                venue: "venue 1",
-                winner: "asdf sadf",
-                announcements: "announcement 1\nannouncement 2\nannouncement 3"
-            }
-        ],
         targetEvent: {
             name: "enter name",
             etime: {
@@ -33,6 +20,19 @@ class Admin extends Component {
         yetToSelectEvent: true,
         targetName: ""
     }
+    events = [
+        {
+            name: "name1",
+            etime: {
+                hrs: 2,
+                min: 1,
+                day: 3
+            },
+            venue: "venue 1",
+            winner: "asdf sadf",
+            announcements: "announcement 1\nannouncement 2\nannouncement 3"
+        }
+    ]
 
     // make copy of entire struct, ref: https://stackoverflow.com/questions/43638938/updating-an-object-with-setstate-in-react
 
@@ -84,7 +84,7 @@ class Admin extends Component {
         }
         function setTargetEvent(e){
             let found=false;
-            self.state.events.forEach(event=>{
+            self.events.forEach(event=>{
                 if(event.name.trim()===self.state.targetName){
                     self.state.targetEvent=event;
                     found=true;
@@ -101,10 +101,10 @@ class Admin extends Component {
 
         function makeChanges(e){
             console.log("CALLED MAKECHANGES\n");
-            for(let i=0;i<self.state.events.length;i++){
-                if(self.state.events[i].name.trim()===self.state.targetName){
-                    console.log(self.state.events[i]);
-                    self.state.events[i]=self.state.targetEvent;
+            for(let i=0;i<self.events.length;i++){
+                if(self.events[i].name.trim()===self.state.targetName){
+                    console.log(self.events[i]);
+                    self.events[i]=self.state.targetEvent;
                     alert("Successfully changed!!\n");
                     return;
                 }
