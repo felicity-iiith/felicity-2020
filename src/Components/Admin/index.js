@@ -40,7 +40,7 @@ class Admin extends Component {
 
     // make copy of entire struct, ref: https://stackoverflow.com/questions/43638938/updating-an-object-with-setstate-in-react
 
-    setTargetDay = (e) => this.setState({ targetEvent : {
+    setTargetDay = e => this.setState({ targetEvent : {
         name:this.state.targetEvent.name, venue:this.state.targetEvent.venue, winner:this.state.targetEvent.winner, 
         announcements: this.state.targetEvent.announcements,
         descript: this.state.targetEvent.descript, img_cdns:this.state.img_cdns,
@@ -49,7 +49,7 @@ class Admin extends Component {
         }
     }}); // fu react :/
 
-    setTargetHrs = (e) => this.setState({ targetEvent : { 
+    setTargetHrs = e => this.setState({ targetEvent : { 
         name:this.state.targetEvent.name, venue:this.state.targetEvent.venue, winner:this.state.targetEvent.winner, 
         announcements: this.state.targetEvent.announcements,
         descript: this.state.targetEvent.descript, img_cdns:this.state.img_cdns,
@@ -58,7 +58,7 @@ class Admin extends Component {
         }
     }});
 
-    setTargetMin = (e) => this.setState({ targetEvent : { 
+    setTargetMin = e => this.setState({ targetEvent : { 
         name:this.state.targetEvent.name, venue:this.state.targetEvent.venue, winner:this.state.targetEvent.winner, 
         announcements: this.state.targetEvent.announcements,
         descript: this.state.targetEvent.descript, img_cdns:this.state.img_cdns,
@@ -67,34 +67,34 @@ class Admin extends Component {
         }
     }});
 
-    setTargetVenue = (e) => this.setState({ targetEvent : {
+    setTargetVenue = e => this.setState({ targetEvent : {
         etime: this.state.targetEvent.etime, name: this.state.targetEvent.name, winner: this.state.targetEvent.winner, 
         announcements:this.state.targetEvent.announcements, 
         descript: this.state.targetEvent.descript, img_cdns:this.state.img_cdns,
         venue: e.target.value
     }});
 
-    setWinner = (e) => this.setState({ targetEvent : {
+    setWinner = e => this.setState({ targetEvent : {
         name: this.state.targetEvent.name,  etime: this.state.targetEvent.etime, venue: this.state.targetEvent.venue, 
         announcements:this.state.targetEvent.announcements, 
         descript: this.state.targetEvent.descript, img_cdns:this.state.img_cdns,
         winner: e.target.value
     }});
 
-    setAnns = (e) => this.setState({ targetEvent : {
+    setAnns = e => this.setState({ targetEvent : {
         name: this.state.targetEvent.name,  etime: this.state.targetEvent.etime, venue: this.state.targetEvent.venue, 
         winner: this.state.targetEvent.winner, 
         descript: this.state.targetEvent.descript, img_cdns:this.state.img_cdns,
         announcements: e.target.value 
     }});
 
-    setDesc = (e) => this.setState({targetEvent:{
+    setDesc = e => this.setState({targetEvent:{
         name: this.state.targetEvent.name,  etime: this.state.targetEvent.etime, venue: this.state.targetEvent.venue, 
         winner: this.state.targetEvent.winner, announcements:this.state.targetEvent.announcements,
         img_cdns:this.state.img_cdns, descript: e.target.value
     }})
 
-    setImgs = (e) => this.setState({targetEvent:{
+    setImgs = e => this.setState({targetEvent:{
         name: this.state.targetEvent.name,  etime: this.state.targetEvent.etime, venue: this.state.targetEvent.venue, 
         winner: this.state.targetEvent.winner, announcements:this.state.targetEvent.announcements,
         descript:this.state.descript, img_cdns: e.target.value    
