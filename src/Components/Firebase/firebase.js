@@ -1,11 +1,11 @@
 import app from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
-import {config} from '../../Constants/firebase_config';
+// import {config} from '../../Constants/firebase_config';
 
 class Firebase {
   constructor() {
-    app.initializeApp(config);
+    // app.initializeApp(config);
 
     /* Helper */
 
@@ -14,12 +14,12 @@ class Firebase {
 
     /* Firebase APIs */
 
-    this.auth = app.auth();
+    // this.auth = app.auth();
     // this.db = app.database();
 
     /* Social Sign In Method Provider */
 
-    this.googleProvider = new app.auth.GoogleAuthProvider();
+    // this.googleProvider = new app.auth.GoogleAuthProvider();
   }
 
   // *** Auth API ***
