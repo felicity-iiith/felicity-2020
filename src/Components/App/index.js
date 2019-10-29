@@ -6,6 +6,7 @@ import LandingPage from '../Landing';
 import SignInPage from '../SignIn';
 import HomePage from '../Home';
 import AdminPage from '../Admin';
+import GalleryPage from '../Gallery';
 // import AccountPage from '../Account';
 
 import * as ROUTES from '../../Constants/routes';
@@ -21,6 +22,7 @@ const App = () => (
       <Route path={ROUTES.HOME} component={HomePage} />
       <Route path={ROUTES.SIGN_IN} component={SignInPage} />
       <Route path={ROUTES.ADMIN} component={AdminPage} />
+      <Route path={ROUTES.GALLERY} component={GalleryPage} />
       {/*<Route path={ROUTES.ACCOUNT} component={AccountPage} /> */}
     </div>
   </Router>
