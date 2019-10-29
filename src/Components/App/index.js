@@ -5,6 +5,7 @@ import Navigation from '../Navigation';
 import LandingPage from '../Landing';
 import SignInPage from '../SignIn';
 import HomePage from '../Home';
+// import AdminPage from '../Admin';
 // import AccountPage from '../Account';
 import Admin from '../Admin';
 
