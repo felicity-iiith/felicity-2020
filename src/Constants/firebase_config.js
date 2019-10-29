@@ -1,4 +1,4 @@
-export const firebaseConfig = {
+export const config = {
     apiKey: "AIzaSyDzk0rEn1JV1S_t_cD1COAV1dxX7xi2rJo",
     authDomain: "felicitytest-6c60c.firebaseapp.com",
     databaseURL: "https://felicitytest-6c60c.firebaseio.com",
