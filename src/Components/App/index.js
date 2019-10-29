@@ -6,6 +6,7 @@ import LandingPage from '../Landing';
 import SignInPage from '../SignIn';
 import HomePage from '../Home';
 // import AccountPage from '../Account';
+import Admin from '../Admin';
 
 import * as ROUTES from '../../Constants/routes';
 
@@ -19,6 +20,7 @@ const App = () => (
       <Route exact path={ROUTES.LANDING} component={LandingPage} />
       <Route path={ROUTES.HOME} component={HomePage} />
       <Route path={ROUTES.SIGN_IN} component={SignInPage} />
+      <Route path={ROUTES.ADMIN} component={Admin} />
       {/*<Route path={ROUTES.ACCOUNT} component={AccountPage} /> */}
     </div>
   </Router>
