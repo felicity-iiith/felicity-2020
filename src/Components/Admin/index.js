@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { thisExpression } from '@babel/types';
+// import { thisExpression } from '@babel/types';
 
 class Admin extends Component {
     check(e){
@@ -103,9 +103,8 @@ class Admin extends Component {
     render(){
         const self=this;
         function setTarget(e) {
-            // this.state.targetName=e
             self.state.targetName=e.target.value.trim();
-            console.log(self.state.targetName);
+            // console.log(self.state.targetName);
         }
         function setTargetEvent(e){
             let found=false;
@@ -125,10 +124,10 @@ class Admin extends Component {
         }
 
         function makeChanges(e){
-            console.log("CALLED MAKECHANGES\n");
+            // console.log("CALLED MAKECHANGES\n");
             for(let i=0;i<self.events.length;i++){
                 if(self.events[i].name.trim()===self.state.targetName){
-                    console.log(self.events[i]);
+                    // console.log(self.events[i]);
                     self.events[i]=self.state.targetEvent;
                     alert("Successfully changed!!\n");
                     return;
@@ -137,10 +136,32 @@ class Admin extends Component {
             alert("value not changed, reload page and try again");
         }
 
+        function addTargetEvent(e){
+            let found=false;
+            self.events.forEach(event=>{
+                if(event.name.trim()===self.state.targetName){
+                    self.state.targetEvent=event;
+                    found=true;
+                }
+            });
+            if(found){
+                alert("Event is already added, modify using \"modify select event\"");
+            } else {
+                // console.log("ADDING EVENT : " + self.state.targetName);
+                self.state.targetEvent.name=self.state.targetName;
+                self.events.push({...self.state.targetEvent});
+                alert("Event added successfully, modify it using \"modify select event\"");
+            }
+        }
+
         return(
             <div>
                 {this.state.yetToSelectEvent && (
-                    <div> Event:  <input type="text" onChange={setTarget}></input> <button onClick={setTargetEvent}>select</button> </div>
+                    <div> 
+                        Event:  <input type="text" onChange={setTarget}></input> <p></p> 
+                        <button onClick={setTargetEvent}>modify select event</button>  
+                        <button onClick={addTargetEvent}>add select event</button>                         
+                    </div>
                 )}
                 {(!this.state.yetToSelectEvent)&&(
                     <div>
