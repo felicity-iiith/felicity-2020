@@ -1,6 +1,28 @@
 import React, {Component} from 'react';
 // import { thisExpression } from '@babel/types';
-
+const divStyle = {
+    margin: '40px'
+};
+const h2Style = {
+    fontSize: '1.8em',
+    textAlign: 'left'
+};
+const col25Style = {
+    float: 'left',
+    width: '25%'
+};
+const col75Style = {
+    float: 'left',
+    width: '75%',
+};
+const textAreaStyle = {
+    width: '75%',
+    cols: '80',
+    rows: '4' 
+}
+const pStyle = {
+    padding : '10px'
+}
 class Admin extends Component {
     check(e){
         console.log(e.target);
@@ -157,25 +179,25 @@ class Admin extends Component {
         return(
             <div>
                 {this.state.yetToSelectEvent && (
-                    <div> 
+                    <div style={divStyle}>
                         Event:  <input type="text" onChange={setTarget}></input> <p></p> 
                         <button onClick={setTargetEvent}>modify select event</button>  
                         <button onClick={addTargetEvent}>add select event</button>                         
                     </div>
                 )}
                 {(!this.state.yetToSelectEvent)&&(
-                    <div>
-                        <h2>Selected event: {this.state.targetEvent.name} </h2>
-                        Day: <input type="number" value={this.state.targetEvent.etime.day} onChange={this.setTargetDay}></input> <p></p>
-                        Hrs: <input type="number" value={this.state.targetEvent.etime.hrs} onChange={this.setTargetHrs}></input> <p></p>
-                        Min: <input type="number" value={this.state.targetEvent.etime.min} onChange={this.setTargetMin}></input> <p></p>
-                        Venue: <input type="text" value={this.state.targetEvent.venue} onChange={this.setTargetVenue}></input> <p></p>
-                        Winner: <textarea type="text" value={this.state.targetEvent.winner} onChange={this.setWinner}></textarea> <p></p>
-                        Announcements: <textarea type="text" value={this.state.targetEvent.announcements} onChange={this.setAnns}></textarea><p></p>
-                        Description: <textarea type="text" value={this.state.targetEvent.descript} onChange={this.setDesc}></textarea><p></p>
-                        Image cdns: <textarea type="text" value={this.state.targetEvent.img_cdns} onChange={this.setImgs}></textarea>
-                        <p></p>
-                        <button onClick={makeChanges}>CHANGE</button> <p>Nore: change is permanent</p>
+                    <div style={divStyle}>
+                        <h2 style={h2Style}>Selected event: {this.state.targetEvent.name} </h2>
+                        <p style={pStyle}>   <div style={col25Style}> Day: </div>              <div style={col75Style}> <input type="number" value={this.state.targetEvent.etime.day} onChange={this.setTargetDay}></input></div> </p>
+                        <p style={pStyle}>   <div style={col25Style}> Hrs: </div>              <div style={col75Style}> <input type="number" value={this.state.targetEvent.etime.hrs} onChange={this.setTargetHrs}></input></div> </p>
+                        <p style={pStyle}>   <div style={col25Style}> Min: </div>              <div style={col75Style}> <input type="number" value={this.state.targetEvent.etime.min} onChange={this.setTargetMin}></input></div> </p>
+                        <p style={pStyle}>   <div style={col25Style}> Venue: </div>            <div style={col75Style}> <input type="text" value={this.state.targetEvent.venue} onChange={this.setTargetVenue}></input></div> </p>
+                        <p style={pStyle}>   <div style={col25Style}> Winner:</div>            <div style={col75Style}> <textarea type="text" style={textAreaStyle} value={this.state.targetEvent.winner} onChange={this.setWinner}></textarea></div> </p>
+                        <p style={pStyle}>   <div style={col25Style}> Announcements: </div>    <div style={col75Style}> <textarea type="text" style={textAreaStyle} value={this.state.targetEvent.announcements} onChange={this.setAnns}></textarea></div></p>
+                        <p style={pStyle}>   <div style={col25Style}> Description:</div>       <div style={col75Style}> <textarea type="text" style={textAreaStyle} value={this.state.targetEvent.descript} onChange={this.setDesc}></textarea></div></p>
+                        <p style={pStyle}>   <div style={col25Style}> Image cdns: </div>       <div style={col75Style}> <textarea type="text" style={textAreaStyle} value={this.state.targetEvent.img_cdns} onChange={this.setImgs}></textarea></div></p>
+                        <p style={pStyle}> <button onClick={makeChanges}>CHANGE</button>  </p>
+                        <p style={pStyle}>Note: change is permanent</p>
                     </div>
                 )}
             </div>
