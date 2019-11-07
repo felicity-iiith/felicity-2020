@@ -6,6 +6,7 @@
     "firebase": "^7.0.0",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
+    "react-photo-gallery": "^8.0.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.1.2",
     "recompose": "^0.30.0"
