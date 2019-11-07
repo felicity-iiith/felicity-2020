@@ -10,6 +10,7 @@ import HomePage from '../Home';
 import Admin from '../Admin';
 
 import * as ROUTES from '../../Constants/routes';
+import AdminQuiz from '../admin-quiz';
 
 const App = () => (
   <Router>
@@ -22,6 +23,8 @@ const App = () => (
       <Route path={ROUTES.HOME} component={HomePage} />
       <Route path={ROUTES.SIGN_IN} component={SignInPage} />
       <Route path={ROUTES.ADMIN} component={Admin} />
+      <Route path={ROUTES.ADMINQUIZ} component={AdminQuiz} />
+
       {/*<Route path={ROUTES.ACCOUNT} component={AccountPage} /> */}
     </div>
   </Router>
