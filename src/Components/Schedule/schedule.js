@@ -1,88 +1,102 @@
 import React from 'react';
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+
 
 const Schedule = () => (
-<div class="row">
-  <div class="col-md-12">
-    <div class="timeline-main">
-      <ul class="stepper stepper-vertical timeline timeline-simple pl-0">
+ 
+<VerticalTimeline>
+  <VerticalTimelineElement
+    className="vertical-timeline-element--work"
+    contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+    contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+    date="2011 - present"
+    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
 
-        <li>
-          <a href="#!">
-            <span class="circle grey"></span>
-          </a>
+  >
+    <h3 className="vertical-timeline-element-title">Creative Director</h3>
+    <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
+    <p>
+      Creative Direction, User Experience, Visual Design, Project Management, Team Leading
+    </p>
+  </VerticalTimelineElement>
+  <VerticalTimelineElement
+    className="vertical-timeline-element--work"
+    date="2010 - 2011"
+    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+    
+  >
+    <h3 className="vertical-timeline-element-title">Art Director</h3>
+    <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+    <p>
+      Creative Direction, User Experience, Visual Design, SEO, Online Marketing
+    </p>
+  </VerticalTimelineElement>
+  <VerticalTimelineElement
+    className="vertical-timeline-element--work"
+    date="2008 - 2010"
+    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+    
+  >
+    <h3 className="vertical-timeline-element-title">Web Designer</h3>
+    <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
+    <p>
+      User Experience, Visual Design
+    </p>
+  </VerticalTimelineElement>
+  <VerticalTimelineElement
+    className="vertical-timeline-element--work"
+    date="2006 - 2008"
+    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+    
+  >
+    <h3 className="vertical-timeline-element-title">Web Designer</h3>
+    <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+    <p>
+      User Experience, Visual Design
+    </p>
+  </VerticalTimelineElement>
+  <VerticalTimelineElement
+    className="vertical-timeline-element--education"
+    date="April 2013"
+    iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
 
-          <div class="step-content ml-3 p-4 hoverable">
-            <h4 class="font-weight-bold">Ut enim ad minim veniam</h4>
-            <p class="text-muted mt-3"><i class="far fa-clock" aria-hidden="true"></i> 2017</p>
-            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-              ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
-        </li>
-        <li class="timeline-inverted">
-          <a href="#!">
-            <span class="circle grey"></span>
-          </a>
+  >
+    <h3 className="vertical-timeline-element-title">Content Marketing for Web, Mobile and Social Media</h3>
+    <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
+    <p>
+      Strategy, Social Media
+    </p>
+  </VerticalTimelineElement>
+  <VerticalTimelineElement
+    className="vertical-timeline-element--education"
+    date="November 2012"
+    iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
 
-          <div class="step-content mr-xl-3 p-4 hoverable">
-            <h4 class="font-weight-bold">Duis aute irure dolor</h4>
-            <p class="text-muted mt-3"><i class="far fa-clock" aria-hidden="true"></i> 2016</p>
-            <p class="mb-0">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-              doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-              architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-              sequi nesciunt.</p>
-          </div>
-        </li>
-        <li>
-          <a href="#!">
-            <span class="circle grey"></span>
-          </a>
+  >
+    <h3 className="vertical-timeline-element-title">Agile Development Scrum Master</h3>
+    <h4 className="vertical-timeline-element-subtitle">Certification</h4>
+    <p>
+      Creative Direction, User Experience, Visual Design
+    </p>
+  </VerticalTimelineElement>
+  <VerticalTimelineElement
+    className="vertical-timeline-element--education"
+    date="2002 - 2006"
+    iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
+  >
+    <h3 className="vertical-timeline-element-title">Bachelor of Science in Interactive Digital Media Visual Imaging</h3>
+    <h4 className="vertical-timeline-element-subtitle">Bachelor Degree</h4>
+    <p>
+      Creative Direction, Visual Design
+    </p>
+  </VerticalTimelineElement>
+  <VerticalTimelineElement
+    iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
 
-          <div class="step-content ml-3 p-4 hoverable">
-            <h4 class="font-weight-bold">Sed ut nihil unde omnis</h4>
-            <p class="text-muted mt-3"><i class="far fa-clock" aria-hidden="true"></i> 2015</p>
-            <p class="mb-0">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-              adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
-              aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-              suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure
-              reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui
-              dolorem eum fugiat quo voluptas nulla pariatur?</p>
-          </div>
-        </li>
-        <li class="timeline-inverted">
-          <a href="#!">
-            <span class="circle grey"></span>
-          </a>
-
-          <div class="step-content mr-xl-3 p-4 hoverable">
-            <h4 class="font-weight-bold"> Quis autem vel eum voluptate</h4>
-            <p class="text-muted mt-3"><i class="far fa-clock" aria-hidden="true"></i> 2014</p>
-            <p class="mb-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-              praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-              occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi,
-              id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
-          </div>
-        </li>
-        <li>
-          
-          <a href="#!">
-            <span class="circle grey"></span>
-          </a>
-
-          <div class="step-content ml-3 p-4 hoverable">
-            <h4 class="font-weight-bold">Mussum ipsum cacilds</h4>
-            <p class="text-muted mt-3"><i class="far fa-clock" aria-hidden="true"></i> 2013</p>
-            <p class="mb-0">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-              eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic
-              tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut
-              perferendis doloribus asperiores repellat.</p>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
+  />
+</VerticalTimeline>
+  
 
 );
   
