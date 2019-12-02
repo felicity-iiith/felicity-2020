@@ -1,0 +1,13 @@
+.desc {
+  border: solid;	
+  padding: 2vw; 
+  width: 50vw;
+  /*height: 600px;*/
+}
+.images {
+  border: solid;	
+}
+.img {
+  /*height: 200px;*/
+  width: 30vw;
+}
