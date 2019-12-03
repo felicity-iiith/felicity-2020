@@ -6,6 +6,7 @@ import LandingPage from '../Landing';
 import SignInPage from '../SignIn';
 import HomePage from '../Home';
 import GalleryPage from '../Gallery';
+import NewUser from '../NewUser';
 // import AccountPage from '../Account';
 import Admin from '../Admin';
 
@@ -25,6 +26,7 @@ const App = () => (
       <Route path={ROUTES.GALLERY} component={GalleryPage} />
       <Route path={ROUTES.ADMIN} component={Admin} />
       <Route path={ROUTES.ADMINQUIZ} component={AdminQuiz} />
+      <Route path={ROUTES.NEWUSER} component={NewUser} />
 
       {/*<Route path={ROUTES.ACCOUNT} component={AccountPage} /> */}
     </div>

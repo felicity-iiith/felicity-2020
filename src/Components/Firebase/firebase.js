@@ -9,7 +9,7 @@ class Firebase {
 
     /* Helper */
 
-    // this.serverValue = app.database.ServerValue;
+    this.serverValue = app.database.ServerValue;
 
     /* Firebase APIs */
 
@@ -38,7 +38,7 @@ class Firebase {
 
   // *** User API ***
 
-//   user = uid => this.db.ref(`users/${uid}`);
+  user = (uid) => this.db.ref(`users/${uid}`);
 
 //   users = () => this.db.ref('users');
 
