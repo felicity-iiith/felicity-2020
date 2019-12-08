@@ -20,12 +20,7 @@ class SignInGoogleBase extends Component {
   }
 
   onSubmit = event => {
-    this.props.firebase
-      .doSignInWithGoogle().then(()=>{
-          localStorage.setItem('authuser', JSON.stringify(this.props.firebase.auth.currentUser));
-          window.location.reload();
-        //   this.props.history.push(ROUTES.HOME);
-      });
+    this.props.firebase.doSignInWithGoogle().then(()=>window.location='/');
 
     event.preventDefault();
   };
