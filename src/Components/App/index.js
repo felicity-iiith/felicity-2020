@@ -9,7 +9,7 @@ import GalleryPage from '../Gallery';
 import NewUser from '../NewUser';
 // import AccountPage from '../Account';
 import Admin from '../Admin';
-
+import Schedule from '../Schedule';
 import * as ROUTES from '../../Constants/routes';
 import AdminQuiz from '../admin-quiz';
 
@@ -26,6 +26,7 @@ const App = () => (
       <Route path={ROUTES.GALLERY} component={GalleryPage} />
       <Route path={ROUTES.ADMIN} component={Admin} />
       <Route path={ROUTES.ADMINQUIZ} component={AdminQuiz} />
+      <Route path={ROUTES.SCHEDULE} component={Schedule} />
       <Route path={ROUTES.NEWUSER} component={NewUser} />
 
       {/*<Route path={ROUTES.ACCOUNT} component={AccountPage} /> */}

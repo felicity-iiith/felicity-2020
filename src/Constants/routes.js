@@ -5,4 +5,5 @@ export const ACCOUNT = '/account';
 export const ADMIN = '/admin';
 export const ADMINQUIZ = '/adminquiz'
 export const GALLERY = '/gallery';
+export const SCHEDULE = '/schedule';
 export const NEWUSER = '/newuser';
