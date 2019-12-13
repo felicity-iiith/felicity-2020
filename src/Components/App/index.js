@@ -12,6 +12,7 @@ import Admin from '../Admin';
 
 import * as ROUTES from '../../Constants/routes';
 import AdminQuiz from '../admin-quiz';
+import Home from '../TestHome';
 
 const App = () => (
   <Router>
