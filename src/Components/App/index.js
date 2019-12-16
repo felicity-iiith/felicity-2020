@@ -17,7 +17,7 @@ import Home from '../TestHome';
 const App = () => (
   <Router>
     <div>
-      <Navigation />
+      <Home />
 
       <hr />
 
