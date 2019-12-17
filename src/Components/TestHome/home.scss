@@ -1,3 +1,10 @@
+@import ".././../Styles/fonts";
+
 .clear-nav {
     margin-top: 9rem;
+}
+
+.main-headers {
+    font-family: $navbar-font;
+    font-weight: 700;
 }

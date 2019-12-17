@@ -1,0 +1,12 @@
+@import "colors";
+@import "fonts";
+
+.page-header {
+    font-family: $page-title;
+    font-size: 5vw;
+    color: $header-title-color;
+
+    @media (max-width: 700px) {
+        font-size: 10vw;
+    }
+}

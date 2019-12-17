@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Navigation from '../Navigation';
 import LandingPage from '../Landing';
@@ -14,22 +14,24 @@ import * as ROUTES from '../../Constants/routes';
 import AdminQuiz from '../admin-quiz';
 import Home from '../TestHome';
 
+import Sponsors from '../TestHome/Sponsors/Sponsors';
+import Contact from '../TestHome/Contact/Contact';
+
 const App = () => (
   <Router>
     <div>
-      <Home />
+      {/* <Home /> */}
 
-      <hr />
 
-      <Route exact path={ROUTES.LANDING} component={LandingPage} />
-      <Route path={ROUTES.HOME} component={HomePage} />
-      <Route path={ROUTES.SIGN_IN} component={SignInPage} />
-      <Route path={ROUTES.GALLERY} component={GalleryPage} />
-      <Route path={ROUTES.ADMIN} component={Admin} />
-      <Route path={ROUTES.ADMINQUIZ} component={AdminQuiz} />
-      <Route path={ROUTES.NEWUSER} component={NewUser} />
+        <Route exact path={ROUTES.LANDING} component={Home} />
+        <Route path={ROUTES.SIGN_IN} component={SignInPage} />
+        <Route path={ROUTES.GALLERY} component={GalleryPage} />
+        <Route path={ROUTES.SPONSORS} component={Sponsors} />
+        <Route path={ROUTES.CONTACT} component={Contact} />
+        <Route path={ROUTES.ADMIN} component={Admin} />
+        <Route path={ROUTES.ADMINQUIZ} component={AdminQuiz} />
+        <Route path={ROUTES.NEWUSER} component={NewUser} />
 
-      {/*<Route path={ROUTES.ACCOUNT} component={AccountPage} /> */}
     </div>
   </Router>
 );
