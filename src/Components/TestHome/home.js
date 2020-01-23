@@ -60,11 +60,11 @@ const Home = () => (
             <div className="custom-row">
               <div className="col-1-of-2 testimonial-card">
                   <span className="testimonial-card-quote">&ldquo;The experience of closing my eyes and hearing everyone singing around me brought me to such a deep peace. I walked in feeling stressed, and walked out with a sense of calm and renewed faith.&rdquo;</span>
-                  <span className="testimonial-card-author">&rdquo;-Mayank Musaddi</span>
+                  <span className="testimonial-card-author">&rdquo;-Tanuj Garg</span>
               </div>
               <div className="col-1-of-2 testimonial-card">
                   <span className="testimonial-card-quote">&ldquo;Being a techno-cultural fest, I got to experience mesmerising cultural events and participate in world class competitons, all in the span of 3 unforgettable nights.&rdquo;</span>
-                  <span className="testimonial-card-author">-Shaunak Badani</span>
+                  <span className="testimonial-card-author">-Mayank Musaddi</span>
               </div>
               {/* <div className="col-1-of-3 testimonial-card">
                   <span className="testimonial-card-quote">&ldquo;To love is to hate, to fear is to conquer, and other bullshit you can tell yourself"</span>
