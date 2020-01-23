@@ -58,18 +58,18 @@ const Home = () => (
               Testimonials
             </h2>
             <div className="custom-row">
-              <div className="col-1-of-3 testimonial-card">
-                  <span className="testimonial-card-quote">&ldquo;To love is to hate, to fear is to conquer, and other bullshit you can tell yourself&rdquo;</span>
+              <div className="col-1-of-2 testimonial-card">
+                  <span className="testimonial-card-quote">&ldquo;The experience of closing my eyes and hearing everyone singing around me brought me to such a deep peace. I walked in feeling stressed, and walked out with a sense of calm and renewed faith.&rdquo;</span>
+                  <span className="testimonial-card-author">&rdquo;-Mayank Musaddi</span>
+              </div>
+              <div className="col-1-of-2 testimonial-card">
+                  <span className="testimonial-card-quote">&ldquo;Being a techno-cultural fest, I got to experience mesmerising cultural events and participate in world class competitons, all in the span of 3 unforgettable nights.&rdquo;</span>
                   <span className="testimonial-card-author">-Shaunak Badani</span>
               </div>
-              <div className="col-1-of-3 testimonial-card">
-                  <span className="testimonial-card-quote">&ldquo;To love is to hate, to fear is to conquer, and other bullshit you can tell yourself&rdquo;</span>
-                  <span className="testimonial-card-author">-Shaunak Badani</span>
-              </div>
-              <div className="col-1-of-3 testimonial-card">
+              {/* <div className="col-1-of-3 testimonial-card">
                   <span className="testimonial-card-quote">&ldquo;To love is to hate, to fear is to conquer, and other bullshit you can tell yourself"</span>
                   <span className="testimonial-card-author">-Shaunak Badani</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -88,25 +88,25 @@ const Home = () => (
                 <div>
                   <SocialIcon 
                    network="instagram"
-                   url="https://instagram.com"
+                   url="https://instagram.com/felicity.iiith"
                    className="footer__icon" 
                    bgColor="transparent"
                    fgColor="white" />
                   <SocialIcon 
                    network="facebook"
-                   url="https://instagram.com"
+                   url="https://www.facebook.com/felicity.iiith/"
                    className="footer__icon" 
                    bgColor="transparent"
                    fgColor="white" />
                   <SocialIcon 
                    network="youtube"
-                   url="https://instagram.com"
+                   url="https://www.youtube.com/channel/UC_1vMv4Al_96QgYzkFjh99w"
                    className="footer__icon" 
                    bgColor="transparent"
                    fgColor="white" />
                   <SocialIcon 
                    network="twitter"
-                   url="https://instagram.com"
+                   url="https://twitter.com/felicity_iiith"
                    className="footer__icon" 
                    bgColor="transparent"
                    fgColor="white" />

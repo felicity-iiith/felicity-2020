@@ -30,10 +30,10 @@ const App = () => (
         {/* <Route path={ROUTES.SIGN_IN} component={SignInPage} /> */}
         {/* <Route path={ROUTES.GALLERY} component={GalleryPage} /> */}
         <Route path={ROUTES.SPONSORS} component={Sponsors} />
-        <Route path={ROUTES.CONTACT} component={Contact} />
+        {/* <Route path={ROUTES.CONTACT} component={Contact} /> */}
         {/* <Route path={ROUTES.ADMIN} component={Admin} /> */}
         {/* <Route path={ROUTES.ADMINQUIZ} component={AdminQuiz} /> */}
-        <Route path={ROUTES.NEWUSER} component={NewUser} />
+        {/* <Route path={ROUTES.NEWUSER} component={NewUser} /> */}
 
     </div>
   </Router>

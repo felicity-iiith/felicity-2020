@@ -151,7 +151,9 @@ $grid-width: 110rem;
     }
 
     &-quote {
+        position: absolute;
         font-size: 3.7rem;
+        padding: 1rem 5rem 0rem 2rem;
     }
 
     &-author {

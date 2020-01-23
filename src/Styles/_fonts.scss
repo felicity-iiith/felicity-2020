@@ -1,12 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Yatra+One|Lato:300,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap');
 
 @font-face {
     font-family: 'Ananda';
     src: url(../assets/fonts/ananda.ttf);
 }
 
+@font-face {
+    font-family: 'Ubuntu', sans-serif;
+    src: url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+}
+
 $main-font: 'Ananda';
-$secondary-font: 'Yatra One';
+$secondary-font: 'Caveat Brush';
 $tertiary-font: 'Lato';
 
 $navbar-font: 'Rubik';
