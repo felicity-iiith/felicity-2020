@@ -19,6 +19,11 @@
     width: 60%;
 
     &_heading-primary {
+
+        &__image {
+            width: 50%;
+            height: auto;
+        }
         & > * {
             display: inline-block;
         }

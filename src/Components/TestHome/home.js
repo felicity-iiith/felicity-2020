@@ -18,7 +18,7 @@ import "./home.scss"
 
 const Home = () => (
     <main>
-      <section className="section-wrapper">
+      <section className="section-wrapper" >
         <section className="section section-home">
           <div className="header">
               <img className="header__logo" src={logo} />
@@ -27,7 +27,9 @@ const Home = () => (
             <h1 className="tagline_heading-primary">
               <span className="tagline_heading-primary--main">Embracing the</span>
               <span className="tagline_heading-primary--sub">curry culture</span>
+              {/* <img className="tagline_heading-primary__image" src={logo} /> */}
             </h1>
+            {/* <button>Download the mobile app</button> */}
           </div>
         </section>
         <section className="section section-about">
