@@ -6,3 +6,7 @@ export const ADMIN = '/admin';
 export const ADMINQUIZ = '/adminquiz'
 export const GALLERY = '/gallery';
 export const NEWUSER = '/newuser';
+export const SPONSORS = '/sponsors';
+export const CONTACT = '/contact';
+export const EVENTS = '/events';
+export const TEAM = '/team';

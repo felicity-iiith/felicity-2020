@@ -2,28 +2,123 @@ import React, { Component } from 'react';
 import { Link, animateScroll as scroll } from "react-scroll";
 import {LoremIpsum} from 'react-lorem-ipsum';
 import * as ROUTES from '../../Constants/routes';
+import Nav from './Navbar/Nav';
+import Logo from "./Logo/Logo";
+import { SocialIcon } from 'react-social-icons';
 
 
+// import images
+import kathak_left from "../../assets/images/main/4_left.png";
+import kathak_right from "../../assets/images/main/4_right.png";
+
+// videos
+import vid from "../../assets/videos/aftermovie_cut.mp4";
+
+import "../../Styles/_main.scss";
+import "./home.scss"
 
 const Home = () => (
-    <div>
-      <div class="container">
-        <div class="main-nav d-none d-lg-block">
-          <nav class="navbar navbar-expand-lg navbar-light" role="navigation"> 
-            <ul class="navbar-nav mr-auto"> 
-              <li class="nav-item"><Link to="Home" spy={true} smooth={true} offset={-70} duration={500}> Home </Link></li>
-              <li><Link to="About" spy={true} smooth={true} offset={-70} duration={500}> About </Link></li>
-              <li><Link to="Theme" spy={true} smooth={true} offset={-70} duration={500}> Theme </Link></li>
-              <li><Link to="Testimonials" spy={true} smooth={true} offset={-70} duration={500}> Testimonials </Link></li>
-              <li><Link to="Video" spy={true} smooth={true} offset={-70} duration={500}> Video </Link></li>
-            </ul>
-          </nav>
+    <main>
+      <section className="section-wrapper" >
+        <section className="section section-home">
+          <Logo />
+          <div className="tagline">
+            <h1 className="tagline_heading-primary">
+              <span className="tagline_heading-primary--main">Embracing the</span>
+              <span className="tagline_heading-primary--sub">curry culture</span>
+              {/* <img className="tagline_heading-primary__image" src={logo} /> */}
+            </h1>
+            {/* <button>Download the mobile app</button> */}
+          </div>
+        </section>
+        <section className="section section-about">
+          <div className="about">
+            <h2 className="about__header">About</h2>
+            <p className="about__description">
+              Felicity is iiit's annual culture and tech fest. Held every year at he beginning of the 
+              spring semester, it is the highlight of an iiitian's year and is an event that everybody
+              looks forward to. Felicity encompasses and embraces the varied and diverse interests of 
+              iiit with everyone playing a role.
+            </p>
+          </div>
+        </section>
+        <section className="section section-theme">
+          <div className="section-theme__text">
+            <span>Indian</span>
+            <span>Culture</span>
+          </div>
+        </section>
+      </section>
+      <section className="section section-testimonials">
+        
+        <div className="testimonials">
+          <img src={kathak_left} className="kathak__left"/>
+          <img src={kathak_right} className="kathak__right"/>
+          <div className="testimonials-text">
+            <h2 className="testimonials-text__header">
+              Testimonials
+            </h2>
+            <div className="custom-row">
+              <div className="col-1-of-3 testimonial-card">
+                  <span className="testimonial-card-quote">&ldquo;To love is to hate, to fear is to conquer, and other bullshit you can tell yourself&rdquo;</span>
+                  <span className="testimonial-card-author">-Shaunak Badani</span>
+              </div>
+              <div className="col-1-of-3 testimonial-card">
+                  <span className="testimonial-card-quote">&ldquo;To love is to hate, to fear is to conquer, and other bullshit you can tell yourself&rdquo;</span>
+                  <span className="testimonial-card-author">-Shaunak Badani</span>
+              </div>
+              <div className="col-1-of-3 testimonial-card">
+                  <span className="testimonial-card-quote">&ldquo;To love is to hate, to fear is to conquer, and other bullshit you can tell yourself"</span>
+                  <span className="testimonial-card-author">-Shaunak Badani</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <LoremIpsum p="100"> </LoremIpsum> 
-      <div id='Home'><h1>HERE</h1></div>
+      </section>
+      <section className="section section-footer">
+        <div className="bg-video">
+            <video className="bg-video__content" autoPlay muted loop>
+                <source src={vid} type="video/webm" /> 
+                Your browser is not supported
+            </video>
+        </div>
+        <footer>
+          <div className="footer">
+            <div className="footer__text">
+                <p>Connect with us : </p>
+                <div>
+                  <SocialIcon 
+                   network="instagram"
+                   url="https://instagram.com"
+                   className="footer__icon" 
+                   bgColor="transparent"
+                   fgColor="white" />
+                  <SocialIcon 
+                   network="facebook"
+                   url="https://instagram.com"
+                   className="footer__icon" 
+                   bgColor="transparent"
+                   fgColor="white" />
+                  <SocialIcon 
+                   network="youtube"
+                   url="https://instagram.com"
+                   className="footer__icon" 
+                   bgColor="transparent"
+                   fgColor="white" />
+                  <SocialIcon 
+                   network="twitter"
+                   url="https://instagram.com"
+                   className="footer__icon" 
+                   bgColor="transparent"
+                   fgColor="white" />
+                </div>
 
-    </div>
+            </div>
+          </div>
+        </footer>
+      </section>
+
+    </main>
 
   );
 

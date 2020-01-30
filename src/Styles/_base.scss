@@ -1,0 +1,104 @@
+@import "./fonts";
+@import "./colors";
+
+$aspect-ratio: calc(2670 / 1598);
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+} /*Universal reset, so that every browser renders the page in the same way. */
+
+html {
+    // This defines what 1 rem is
+    font-size: 62.5%; // 1rem = 10px
+
+    // 87rem = 1 viewport
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Ananda';
+}
+
+.section {
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    height: calc(100vw * 2670 / (1598*3) );
+    width: 100%;
+
+    &-home {
+        background-image:  linear-gradient(to bottom, 
+        rgba($color-black, 0.6),
+        rgba($color-black, 0.5),
+        rgba($color-black, 0));
+    }
+
+    &-wrapper {
+        background-image: url(../assets/images/main/1.png);
+        background-size: contain;
+        width: 100%;
+        // height: calc(100% * 2670 / 1598);
+    }
+
+    &-about {
+        position: relative;
+    
+        .about {
+            padding: 1rem 2rem;
+            height: 50%;
+            width: 50%;
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            border-radius: 3px;
+            transition: all 0.2s;
+            // text-shadow: 0 0.5rem 1rem $color-black;
+    
+            // &:hover {
+            box-shadow: 0 0.2rem 0.4rem #000;
+            transform: translate(-50%, -51%) scale(1.01);
+            background-color: rgba($color-black, 0.2);
+            // }
+    
+            &__header {
+                font-size: 15rem;
+            }
+    
+            &__description {
+                font-size: 3rem;
+                font-family: $secondary-font;
+            }
+        }
+    }
+
+    &-testimonials {
+        height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(to bottom, rgba($taj-mahal-dirt-color, 1), rgba($color-black, 1));
+    }
+
+    &-theme {
+        
+        &__text {
+            height: 25rem;
+            color: #b46f57;
+            // margin-top: 10rem;
+            width: 100%;
+            font-size: 10rem;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    }
+
+    &-footer {
+        color: white;
+    }
+}

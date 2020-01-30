@@ -1,0 +1,51 @@
+
+@import "../../../Styles/fonts";
+
+.sidenav {
+    height: 100vh;
+    width: 20%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    background-color: black;
+    transform: translateX(-100%);
+    transition: transform;
+    transition-timing-function: ease-out;
+    transition-duration: 0.5s;
+
+    div {
+        &:first-child {
+            width: 100%;
+            text-align: right;
+            padding: 1.5rem;
+
+            img {
+                height: auto;
+                width: 10%;
+                cursor: pointer;
+            }
+        }
+        &:not(:first-child) {
+            text-align: center;
+            padding: 1rem 2rem;
+            font-size: 1.5vw;
+            text-transform: uppercase;
+        }
+        
+    }
+
+    .nav-element {
+        text-decoration: none;
+        font-family: $sidenav-font;
+        transition: color;
+        color: #aaa;
+        transition-duration: 0.2s;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    
+
+}

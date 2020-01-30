@@ -1,0 +1,12 @@
+
+.header {
+    height: 15rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    position: absolute;
+
+    &__logo {
+        height: 100%;
+        width: auto;
+    }
+}
