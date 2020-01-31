@@ -1,32 +1,149 @@
 @import "../../../Styles/colors";
 @import "../../../Styles/fonts";
 
-.fixed-top {
-    // fixed to the top
-    display: fixed;
-    z-index: 1;
-    top: 0;
-}
-
-.nav-custom {
-    margin-left: 0 !important;
-    width: 100%;
-    border-bottom: 1px solid black !important;
-    box-shadow: 0.2rem 0.4rem 0.4rem #aeaeae;
-    padding: 1rem 2rem;
-    background-color: $navbar-background-color;
-
-    .topnav {
-        font-family: $navbar-font, sans-serif;
-        font-weight: 400;
-        font-size: 1.3vw;
-        text-transform: uppercase;
-
-        margin-bottom: 0;
+.navigation {
+    &__checkbox {
+        display: none;
     }
-    
 
-    li {
+    &__button {
+        position: fixed;
+        top: 5rem;
+        right: 5rem;
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        background-color: $color-white;
+        z-index: 79;
+        text-align: center;
         cursor: pointer;
+    }
+
+    &__background {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+
+        position: fixed;
+        top: 5.5rem;
+        right: 5.5rem;
+        background-image: radial-gradient(rgba($color-gradient-primary, 1), rgba($color-gradient-secondary, 1));
+        z-index: 59;
+        transition: all 0.5s;
+        // transform: scale(80);
+    }
+
+    &__pundit {
+        height: 100%;
+        background: no-repeat url(../../../assets/images/nav/pundit-large.png);
+        background-position: bottom 0px left 50%;
+        background-size: 60%;
+    }
+
+    &__nav {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        z-index: 69;
+
+        // opacity: 0;
+        bottom: -100rem;
+        transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        // width: 0;
+    }
+
+    &__list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -85%);
+        text-align: center;
+        height: 30rem;
+
+        // background-color: red;
+        list-style: none;
+    }
+
+    &__item {
+
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        height: 30%;
+        font-size: 5rem;
+
+        &--1 {width: 50rem; background-image: url(../../../assets/images/nav/stripe-1.png);}
+        &--2 {width: 60rem; background-image: url(../../../assets/images/nav/stripe-2.png);}
+        &--3 {width: 70rem; background-image: url(../../../assets/images/nav/stripe-3.png);}
+    }
+
+    &__link {
+        &:link, 
+        &:visited {
+            text-decoration: none;
+            color: $color-grey-dark;
+            transition: all 0.2s;
+        }
+
+        &:hover {
+            color: $color-black;
+        }
+
+        span {
+            margin-right: 1.5rem;
+            display: inline-block;
+        }
+    }
+
+
+    // FUNCTIONALITY 
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+
+        &,
+        &::before,
+        &::after {
+            display: inline-block;
+            width: 3.5rem;
+            height: 2px;
+            background-color: $color-black;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all 0.2s;
+        }
+
+        &::before { top: -1rem; }
+        &::after { top: 1rem; }
+    }
+
+    &__button:hover &__icon::before { top: -1.2rem; }
+    &__button:hover &__icon::after { top: 1.2rem; }
+
+    &__checkbox:checked ~ &__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked ~ &__button &__icon::before {
+        transform: rotate(135deg);
+        top: 0;
+    }
+
+    &__checkbox:checked ~ &__button &__icon::after {
+        transform: rotate(-135deg);
+        top: 0;
+    }
+
+    &__checkbox:checked ~ &__nav {
+        bottom: -8rem;
+    }
+
+    &__checkbox:checked ~ &__background {
+        transform: scale(80);
     }
 }
