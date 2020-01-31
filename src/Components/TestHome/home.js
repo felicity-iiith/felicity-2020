@@ -3,10 +3,11 @@ import { Link, animateScroll as scroll } from "react-scroll";
 import {LoremIpsum} from 'react-lorem-ipsum';
 import * as ROUTES from '../../Constants/routes';
 import Nav from './Navbar/Nav';
+import Logo from "./Logo/Logo";
 import { SocialIcon } from 'react-social-icons';
 
+
 // import images
-import logo from "../../assets/images/logo.png";
 import kathak_left from "../../assets/images/main/4_left.png";
 import kathak_right from "../../assets/images/main/4_right.png";
 
@@ -18,12 +19,9 @@ import "./home.scss"
 
 const Home = () => (
     <main>
-      <Nav />
       <section className="section-wrapper" >
         <section className="section section-home">
-          <div className="header">
-              <img className="header__logo" src={logo} />
-          </div>
+          <Logo />
           <div className="tagline">
             <h1 className="tagline_heading-primary">
               <span className="tagline_heading-primary--main">Embracing the</span>

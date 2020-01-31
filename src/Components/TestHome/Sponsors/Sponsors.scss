@@ -1,5 +1,11 @@
 @import "../../../Styles/global";
 
+.section-generic {
+    height: 100vh;
+    width: 100%;
+    background-color: $generic-background-color;
+}
+
 .img-wrapper {
     margin: auto;
 

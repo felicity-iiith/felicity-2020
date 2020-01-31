@@ -1,0 +1,29 @@
+@import "../../Styles/global";
+
+.section-wip {
+    
+    height: 100vh;
+    background-color: $generic-background-color;
+}
+
+.content {
+    width: 70%;
+    text-align: center;
+    
+    @include absCenter;
+
+    &__img{
+        width: 70%;
+        height: auto;
+    }
+
+    &__heading {
+        &--primary {
+            font-size: 10rem;
+        }
+
+        &--sub {
+            font-size: 5rem;
+        }
+    }
+}

@@ -13,8 +13,11 @@ import Admin from '../Admin';
 import * as ROUTES from '../../Constants/routes';
 import AdminQuiz from '../admin-quiz';
 import Home from '../TestHome';
+import Nav from '../TestHome/Navbar/Nav';
 
 import Sponsors from '../TestHome/Sponsors/Sponsors';
+import Events from '../TestHome/Events/Events';
+import Team from '../TestHome/Team/Team';
 import Contact from '../TestHome/Contact/Contact';
 
 
@@ -25,12 +28,14 @@ const App = () => (
     <div>
       {/* <Home /> */}
 
-
+        <Nav />
         <Route exact path={ROUTES.LANDING} component={Home} />
         {/* <Route path={ROUTES.SIGN_IN} component={SignInPage} /> */}
         {/* <Route path={ROUTES.GALLERY} component={GalleryPage} /> */}
         <Route path={ROUTES.SPONSORS} component={Sponsors} />
+        <Route path={ROUTES.EVENTS} component={Events} />
         <Route path={ROUTES.CONTACT} component={Contact} />
+        <Route path={ROUTES.TEAM} component={Team} />
         {/* <Route path={ROUTES.ADMIN} component={Admin} /> */}
         {/* <Route path={ROUTES.ADMINQUIZ} component={AdminQuiz} /> */}
         <Route path={ROUTES.NEWUSER} component={NewUser} />
