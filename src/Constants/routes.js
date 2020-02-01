@@ -9,4 +9,5 @@ export const NEWUSER = '/newuser';
 export const SPONSORS = '/sponsors';
 export const CONTACT = '/contact';
 export const EVENTS = '/events';
+export const EVENT = '/event';
 export const TEAM = '/team';

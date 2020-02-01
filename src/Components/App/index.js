@@ -17,6 +17,7 @@ import Nav from '../TestHome/Navbar/Nav';
 
 import Sponsors from '../TestHome/Sponsors/Sponsors';
 import Events from '../TestHome/Events/Events';
+import Event from '../TestHome/Event/Event';
 import Team from '../TestHome/Team/Team';
 import Contact from '../TestHome/Contact/Contact';
 
@@ -34,6 +35,7 @@ const App = () => (
         {/* <Route path={ROUTES.GALLERY} component={GalleryPage} /> */}
         <Route path={ROUTES.SPONSORS} component={Sponsors} />
         <Route path={ROUTES.EVENTS} component={Events} />
+        <Route path={ROUTES.EVENT} component={Event} />
         <Route path={ROUTES.CONTACT} component={Contact} />
         <Route path={ROUTES.TEAM} component={Team} />
         {/* <Route path={ROUTES.ADMIN} component={Admin} /> */}
