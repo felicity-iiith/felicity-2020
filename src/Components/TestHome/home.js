@@ -18,6 +18,7 @@ import "./home.scss"
 
 const Home = () => (
     <main>
+      <Nav />
       <section className="section-wrapper" >
         <section className="section section-home">
           <div className="header">
