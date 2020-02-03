@@ -10,7 +10,6 @@ import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 // import AccountPage from '../Account';
 // import Admin from '../Admin';
 
-import FirebaseTest from '../Temp_firebase';
 import * as ROUTES from '../../Constants/routes';
 // import AdminQuiz from '../admin-quiz';
 import Home from '../TestHome';
