@@ -1,16 +1,22 @@
 import React, {Component, Fragment} from 'react';
+import { compose } from 'recompose';
+import { withRouter } from 'react-router-dom';
+import { withFirebase } from '../../Firebase';
+
 import WorkInProgress from "../../WorkInProgress/WIP";
 import {Link} from 'react-router-dom';
 import Logo from "../Logo/Logo";
 import "./Events.scss";
 
-class Events extends Component {
+class EventsBase extends Component {
+    constructor(props){
+        super(props);
+        this.state = {events: []};
+    }
 
-    state = {
-        events: [
-            { 'title' : "Web Dev Workshop", 'date' : "9th Feb" , 'link' : 'web-dev' },
-            { 'title' : "Web Dev Workshop", 'date' : "9th Feb" , 'link' : 'web-dev' },
-        ]
+    componentDidMount(){
+        this.props.firebase.getEventNames()
+            .then(data=>{this.setState({events:data})});
     }
     render() {
         const eventUrl = "event";        
@@ -27,6 +33,7 @@ class Events extends Component {
         ));
         return (
             <Fragment>
+                <p>{JSON.stringify(this.state["events"])}</p>
                 <Logo />
                 <section class="section-events">
                     <div className="heading">
@@ -51,5 +58,10 @@ class Events extends Component {
         )
     }
 }
+
+const Events = compose(
+    withRouter,
+    withFirebase,
+  )(EventsBase);
 
 export default Events;

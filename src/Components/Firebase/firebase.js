@@ -21,7 +21,7 @@ class Firebase {
     return this.db.collection(COLLECTIONS.EVENT_COLLECTION).get()
       .then(
         collection => {
-          var event_names = collection.docs.map(doc=>doc.id);
+          var event_names = collection.docs.map(doc=>{ return {title: doc.id, date: doc.data()["Date"], link: "/event/"+doc.id}} );
           console.log("event names: " + JSON.stringify(event_names))
           return event_names;
         }
