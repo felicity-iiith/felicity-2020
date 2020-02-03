@@ -31,8 +31,6 @@ const App = () => (
       {/* <Home /> */}
 
         <Nav />
-        <Route exact path={ROUTES.FIREBASE_TEST_EVENT} component = {FirebaseTest} />
-        <Route exact path={ROUTES.FIREBASE_TEST} component = {FirebaseTest} />
         <Route exact path={ROUTES.LANDING} component={Home} />
         {/* <Route path={ROUTES.SIGN_IN} component={SignInPage} /> */}
         {/* <Route path={ROUTES.GALLERY} component={GalleryPage} /> */}
