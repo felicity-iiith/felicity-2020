@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-import { Link, animateScroll as scroll } from "react-scroll";
-import {LoremIpsum} from 'react-lorem-ipsum';
-import * as ROUTES from '../../Constants/routes';
-import Nav from './Navbar/Nav';
 import Logo from "./Logo/Logo";
 import { SocialIcon } from 'react-social-icons';
 
@@ -15,7 +11,7 @@ import kathak_right from "../../assets/images/main/4_right.png";
 import vid from "../../assets/videos/aftermovie_cut.mp4";
 
 import "../../Styles/_main.scss";
-import "./home.scss"
+import "./home.scss";
 
 const Home = () => (
     <main>

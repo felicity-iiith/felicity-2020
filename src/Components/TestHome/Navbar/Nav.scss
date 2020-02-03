@@ -1,5 +1,6 @@
 @import "../../../Styles/colors";
 @import "../../../Styles/fonts";
+@import "../../../Styles/global";
 
 .navigation {
     &__checkbox {
@@ -37,12 +38,18 @@
         height: 100%;
         background: no-repeat url(../../../assets/images/nav/pundit-large.png);
         background-position: bottom 0px left 50%;
-        background-size: 60%;
+        background-size: 59%;
+
+        @include respond(desktop) { background-size: 70%; }
+        @include respond(tab-land) { background-size: 90%;}
+        @include respond(tab-port) { background-size: 95%;}
+        @include respond(phone) { background-size: 130%;}
     }
 
     &__nav {
         position: fixed;
-        height: 100vh;
+        height: 110vh;
+        @include respond(desktop) { height: 105vh; }
         width: 100%;
         z-index: 69;
 
@@ -58,7 +65,12 @@
         left: 50%;
         transform: translate(-50%, -85%);
         text-align: center;
-        height: 30rem;
+        height: 28rem;
+        @include respond(desktop) { height: 26rem;}
+        @include respond(tab-land) { height: 28.5rem;}
+        @include respond(tab-port) { height: 26rem; transform: translate(-50%, -45%);}
+        @include respond(bada-wala-phone) { height: 23rem; transform: translate(-50%, -10%);}
+        @include respond(phone) { height: 27rem; transform: translate(-50%, -35%);}
 
         // background-color: red;
         list-style: none;
@@ -71,10 +83,30 @@
         margin: 0 auto;
         height: 30%;
         font-size: 5rem;
+        @include respond(tab-land) { font-size: 4rem; }
+        @include respond(bada-wala-phone) { font-size: 3rem; }
 
-        &--1 {width: 50rem; background-image: url(../../../assets/images/nav/stripe-1.png);}
-        &--2 {width: 60rem; background-image: url(../../../assets/images/nav/stripe-2.png);}
-        &--3 {width: 70rem; background-image: url(../../../assets/images/nav/stripe-3.png);}
+        &--1 {
+            width: 50rem; 
+            @include respond(tab-port) { width: 40rem; }
+            @include respond(bada-wala-phone) { width: 30rem; }
+            @include respond(phone) { width: 50rem; }
+            background-image: url(../../../assets/images/nav/stripe-1.png);
+        }
+        &--2 {
+            width: 60rem;
+            @include respond(tab-port) { width: 50rem; }
+            @include respond(bada-wala-phone) { width: 40rem; }
+            @include respond(phone) { width: 60rem; }
+            background-image: url(../../../assets/images/nav/stripe-2.png);
+        }
+        &--3 {
+            width: 70rem;
+            @include respond(tab-port) { width: 60rem; }
+            @include respond(bada-wala-phone) { width: 50rem; }
+            @include respond(phone) { width: 70rem; }
+            background-image: url(../../../assets/images/nav/stripe-3.png);
+        }
     }
 
     &__link {

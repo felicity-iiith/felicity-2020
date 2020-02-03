@@ -1,5 +1,6 @@
 @import "./fonts";
 @import "./colors";
+@import "./global";
 
 $aspect-ratio: calc(2670 / 1598);
 
@@ -16,6 +17,18 @@ html {
     // This defines what 1 rem is
     font-size: 62.5%; // 1rem = 10px
 
+    @include respond(desktop) {
+        font-size: 60%; // 1rem = 9px
+    }
+
+    @include respond(tab-land) {
+        font-size: 56.25%; // 1rem = 9px
+    } 
+
+    @include respond(tab-port) {
+        font-size: 50%; // 1rem = 8px;
+    }
+
     // 87rem = 1 viewport
 }
 
@@ -27,7 +40,8 @@ body {
 .section {
     // background-size: contain;
     // background-repeat: no-repeat;
-    height: calc(100vw * 2670 / (1598*3) );
+    // height: calc(100vw * 2670 / (1598*3) );
+    height: 100vh;
     width: 100%;
 
     &-home {
@@ -39,14 +53,14 @@ body {
 
     &-wrapper {
         background-image: url(../assets/images/main/1.png);
-        background-size: contain;
+        background-size: 100%;
         width: 100%;
+        height: 323vh;
         // height: calc(100% * 2670 / 1598);
     }
 
     &-about {
         position: relative;
-    
         .about {
             padding: 1rem 2rem;
             height: 50%;
@@ -65,6 +79,7 @@ body {
             box-shadow: 0 0.2rem 0.4rem #000;
             transform: translate(-50%, -51%) scale(1.01);
             background-color: rgba($color-black, 0.2);
+
             // }
     
             &__header {
@@ -85,6 +100,8 @@ body {
     }
 
     &-theme {
+        // background-color: rgba(red, 0.8);
+        height: 100vh;
         
         &__text {
             height: 25rem;

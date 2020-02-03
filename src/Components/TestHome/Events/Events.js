@@ -12,7 +12,6 @@ class Events extends Component {
             { 'title' : "Web Dev Workshop", 'date' : "9th Feb" , 'link' : 'web-dev' },
         ]
     }
-    // const events = 
     render() {
         const eventUrl = "event";        
         const events = this.state.events.map(event => (
