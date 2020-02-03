@@ -1,0 +1,212 @@
+@import "../../../Styles/global";
+
+.section-events {
+    background-color: $generic-background-color;
+    width: 100%;
+    padding: 4rem 2rem;
+}
+
+.heading {
+    & {
+        color: $color-white;
+        width: 70%;
+        margin: 9rem auto;
+        @include respond(phone) { margin: 15rem auto; margin: 12rem auto;}
+        text-align: center;
+
+        &__primary {
+            font-size: 10rem;
+            margin: 6rem 0;
+        }
+
+        &__text {
+            font-size: 3rem;
+            margin-top: 3rem;
+        }
+    }
+}
+
+.sitar {
+    & {
+        height: 500vh;
+        background-image: url(../../../assets/images/events/sitar.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 50%;
+        margin: 0 auto;
+        position: relative;
+
+        &__string {
+            width: 3px;
+            height: 200vh;
+            position: absolute;
+            left: 50.5%;
+            padding: 70rem 0;
+            @include respond(desktop) { padding: 60rem 0; }
+            @include respond(tab-land) { padding: 50rem 0; }
+            @include respond(tab-port) { padding: 40rem 0; }
+        }
+    }
+}
+
+.event {
+
+    &__link {
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+    &__box {
+        width: 50%;
+        position: relative;
+        margin-bottom: 12rem; // this is the separation between two circles
+
+        @include respond(desktop) { margin-bottom: 8rem;}
+        @include respond(tab-land) { margin-bottom: 6rem;}
+        // @include respond(tab-port) { margin-bottom: 6rem;}
+
+        &--circle {
+            height: 1.5rem;
+            width: 1.5rem;
+            transform: translateX(-40%);
+            border-radius: 50%;
+            border: 4px solid $color-white;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 2px;
+                left: 7px;
+                background-color: $color-white;
+                width: 30rem;
+                height: 3px;
+                z-index: 65;
+
+                @include respond(desktop) { width: 25rem; }
+                // @include respond(tab-port) { width: 20rem; }
+            }
+
+            
+        }
+
+        &:nth-child(even) &--circle::after {
+            transform: rotate(180deg);
+            transform-origin: 0%;
+            left: -1px;
+        }
+
+        &:nth-child(even) &--text {
+            transform: translate(-150%, -50%);
+        }  
+
+        &:nth-child(even) &--text:hover {
+            transform: translate(-150%, -51%) scale(1.1);
+        }  
+
+        &--text {
+            height: 15rem;
+            padding: 2rem 1rem;
+            background-color: $color-white;
+            // background-color: rgba($color-white, 0.2);
+            width: 30rem;
+            @include respond(desktop) { width: 25rem; }
+            @include respond(tab-port) { width: 20rem; }
+            border-radius: 1rem;
+            position: absolute;
+            // margin: 0 auto;
+            text-align: center;
+            left: 50%;
+            transform: translate(50%, -50%); //translate(left, top)
+
+            transition: transform 0.2s;
+
+            &:hover {
+                transform: translate(50%, -51%) scale(1.1);
+            }
+        }
+    }
+
+    &__title {
+        font-size: 5rem;
+        @include respond(desktop) { font-size: 4rem; }
+        @include respond(tab-land) { font-size: 3rem; }
+        line-height: 4.5rem;
+    }
+    
+    &__details {
+        font-size: 2rem;
+        @include respond(tab-land) { font-size: 2rem; }
+        color: $color-grey-dark;
+    }
+}
+
+// ALIGNING SITAR TO LEFT FOR PHONE
+@include respond(phone) {
+    .heading {
+        & {
+            &__primary {
+                font-size: 8rem;
+            }
+
+            &__text {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+
+    .sitar {
+        & {
+            height: 200vh;
+            background-image: url(../../../assets/images/events/sitar.png);
+            transform: translateX(-50%);
+            margin: 0 ;
+    
+            &__string {
+                padding: 15rem 0;
+                @include respond(small-phone) { padding: 2rem 0; }
+            }
+        }
+    }
+
+    .event {
+    
+        &__box {
+            margin-bottom: 8rem; // this is the separation between two circles    
+            @include respond(small-phone) { margin-bottom: 6rem;}
+    
+            &:nth-child(even) &--circle::after {
+                transform: rotate(0deg);
+            }
+    
+            &:nth-child(even) &--text, &--text {
+                height: 8rem;
+                width: 45rem;
+                @include respond(small-phone) { width: 30rem; height: 6rem; }
+                margin: 0;
+                transform: translate(20%, -50%); //translate(left, top)
+            }
+        }
+    
+        &__title {
+            font-size: 3rem;
+            display: inline-block;
+            @include respond(small-phone) { display: block; width: 100% ; font-size: 2rem; line-height: 1rem;}
+            width: 80%;
+            line-height: 4.5rem;
+        }
+        
+        &__details {
+            font-size: 2rem;
+            display: inline-block;
+            width: 20%;
+            @include respond(small-phone) { display: block; width: 100% ; font-size: 1.5rem; }
+
+            color: $color-grey-dark;
+        }
+    }
+}
+

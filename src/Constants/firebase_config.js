@@ -1,10 +1,12 @@
   export const config = {
-    apiKey: "AIzaSyDzk0rEn1JV1S_t_cD1COAV1dxX7xi2rJo",
-    authDomain: "felicitytest-6c60c.firebaseapp.com",
-    databaseURL: "https://felicitytest-6c60c.firebaseio.com/",
-    projectId: "felicitytest-6c60c",
-    storageBucket: "felicitytest-6c60c.appspot.com",
-    messagingSenderId: "860737957179",
-    appId: "1:860737957179:web:e013d5f95714586b8fdb1e",
-    measurementId: "G-W06ST8Y9KV"
-  };
+    type: "service_account",
+    projectId: "android-1-ff119",
+    privateKeyId: "1c6f38862a025f00ca3076e9648a7e4ed8077d27",
+    privateKey: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCyJjQzlB4b2LhR\ngJMNAa5LIylpYKVgYrzHQS1XGXz0qS0/soWIRdOeNQb974MQKPST7s4AtkKzm1Sd\nGu7kSRALEqYvS64zrRsien9lL0wi23Sdoy5IkIW+G+DKHIpKOCuKHfXSZrPJ6/eG\nquOKJiDHOrhTMdMTvEk3cxLjRI6GV9uUMS7H/tl0d6cd0U9cQ8sneZNBqMpkfJ6d\nuwptFZYqDyQxoqklvEBrvm9jsrMn8Hj2I35cNsy0xQrWN/owjD22ED3eOI9AxzC2\nCbU9l/c2oJTJ7kOhhXAfWfx7fNl3Nu8Ap+fLeRdU7PHKC6bTKMc5XSctjYTdrbzJ\nnMoh4ne1AgMBAAECggEAOe6yixNfty6Cwf5N06z4QPbuQJZtMSrquOE5HVnsiKN7\nU3t6cRZD+u7Dl1CMDnVDE9hUpWafykh4+54GkbYwwWkPIdI6lBN2/39WblEzMSKs\niZbHNlHJLElkkFU3o2sgvYmApys+zCswE1r/I63CewddabCKM6DHLoD9Y2qn7oeY\nMwbm1o9csOEMd4nJ/J1Q+FEHg5BKlAT7r6zG8HiLbwCPrptaN5WAKkd6rxpnUBMS\nDTZSAwav/VQMahU2I0snFGNGkzO6KNBn14zIQ/BNcV777/bxOptsyfUJ903njb7P\nN6diQLIVnkHzG4btlJgNwJElh7yzX5wyeSTev3mXAQKBgQDpFg50wlLoRdjs8nmt\nDU0u1zr9wSdQfigA5Om32s+CK3wSEElAMKBUdCvssZHpqqauveh7IAexlnaqqVJb\nK/aanHo7837PJ9O7VAvCfGiq9njEBwiISXy/1rh8xa3bvd53fTgIKmbkXYcCS/w/\nWa5SlhK9jT2YkwOOItu160WkgwKBgQDDqZT2Zqd7jr5HU9HZlTfK8tCm77D4T3cF\npFf4Riv9OaAn26SksacrAj5FTrQfFM2btKulhnU4SIo4/ZkgQtbbnCb7HMOVeOuS\nHbVNRLvGFJIhTW7xVM6OxxJEwEjazBqeEQDcEprFmtzi1opMPK2M8VV8i+m8SbV/\nHaIKjTDtZwKBgQDoQeo1vk0O1krKEPPd1JtMSXumz4l1U8BY48FgStDrTJldBo13\nQP0CKqB6Qpa62CkvhlzaE5iXBO9KL165Kp2YgsPqaT+6/FynFaCCM6W4ddDwxHFk\nHJYKMtOywOf1RsUfG89xk47jj66wQzcfiSWDdbdG2i6+kf/A6ks0gzPqMQKBgG/1\n0MxyDzIviwgLmY/0x7k02lo727sq1YN/9+qUVMWQvOkx0POAyJResz07fOwwHjsT\n1ghgeSDcuWNFEeMY/BMsNk4Ito4IZFv27fCp/PyqdrfhtDMaARxII1b95HJ2ymBa\ngHBtoOyj4fNXKknXisOUsQMUmInqb5WuYjPBeRbPAoGAa5jaSdedwYBYqPBtfhdq\nnEu9U6Tz4zLs9I/x3/EjZf2A84m1FnKgS8cs4FBLF2mID3Wx82c5I0L1/WREe0WV\nMBN3v98ebKFTEppuu8zTylEt+zYGifts9UJsmhHqd0KPUecbuyXsxFdSK05exZJG\npbSFcur/LKbekeKwLikSFa4=\n-----END PRIVATE KEY-----\n",
+    clientEmail: "firebase-adminsdk-4hlos@android-1-ff119.iam.gserviceaccount.com",
+    clientId: "116602818139285289653",
+    authUri: "https://accounts.google.com/o/oauth2/auth",
+    tokenUri: "https://oauth2.googleapis.com/token",
+    authProviderX509CertUrl: "https://www.googleapis.com/oauth2/v1/certs",
+    clientX509CertUrl: "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-4hlos%40android-1-ff119.iam.gserviceaccount.com"
+  }

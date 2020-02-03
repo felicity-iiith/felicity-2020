@@ -1,9 +1,14 @@
+@import "../../../Styles/global";
+
 
 .header {
     height: 15rem;
-    padding: 1rem 3rem;
     cursor: pointer;
     position: absolute;
+    top: 4rem;
+    left: 4rem;
+    z-index: 10;
+    @include respond(phone) { top: 1rem; left: 1rem; }
 
     &__logo {
         height: 100%;

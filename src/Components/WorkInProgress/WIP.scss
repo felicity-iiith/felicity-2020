@@ -15,15 +15,21 @@
     &__img{
         width: 70%;
         height: auto;
+        @include respond(tab-land) { width: 90%; }
     }
 
     &__heading {
         &--primary {
             font-size: 10rem;
+            @include respond(desktop) { font-size: 8rem; }
+            @include respond(tab-land) { font-size: 6rem;}
+            @include respond(phone) { font-size: 4rem; margin-top: 4rem;}
         }
 
         &--sub {
             font-size: 5rem;
+            @include respond(desktop) { font-size: 3rem; }
+            @include respond(tab-port) { font-size: 2.5rem; }
         }
     }
 }

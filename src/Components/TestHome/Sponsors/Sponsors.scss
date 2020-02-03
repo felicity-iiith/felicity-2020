@@ -1,26 +1,80 @@
 @import "../../../Styles/global";
 
-.section-generic {
-    height: 100vh;
-    width: 100%;
-    background-color: $generic-background-color;
+.heading {
+    &-past {
+        width: 80% !important;
+        margin: 0 auto;
+        text-align: right;
+    }
 }
 
-.img-wrapper {
-    margin: auto;
+.sponsor {
 
-    border: 2px solid black;
-    box-shadow: 1rem 2rem 4rem #b5b5b5;
-    border-radius: 2rem;
-    width: 70%;
+    background-color: rgba($color-white, 0.4);
+    width: 80%;
+    @include respond(tab-land) {width: 90%;}
+    @include respond(tab-port) {width: 95%;}
+    margin: 0 auto;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    padding: 2rem 0rem;
 
-    display: flex;
-    justify-content: center;
-    padding: 4vw 6vw;
-    margin: 5rem auto;
+    &--individual {
+        display: inline-block;
+        width: 20%;
+        @include respond(phone) { width: 50%; }
+        position: relative;
+        cursor: pointer;
+        margin: 2rem 0;
+        box-sizing: border-box;
+        padding: 0 2rem;
 
-    img {
+        img {
+            background-color: #fff;
+            border-radius: 400px;
+            width: 100%;
+            height: auto;
+            transition: all .2s;
+            
+        }
+
+        &:hover img {
+            filter: blur(3px) brightness(30%);
+        }
+
+        &:hover &__weight {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+        
+        &__weight {
+            position: absolute;
+            @include absCenter;
+            transform: translate(-50%, 20%);
+            opacity: 0;
+            font-size: 3rem;
+            @include respond(phone) { 
+                // font-size: 2.5rem; 
+                // opacity: 1;
+                // color: $color-black;
+                // transform: translate(-50%, 80%); 
+                display: none;
+            }
+            transition: all .3s;
+        }
+    }
+
+    & > .past_sponsor {
         width: 100%;
         height: auto;
+    }
+
+    &--link {
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: inherit;
+        }
     }
 }
