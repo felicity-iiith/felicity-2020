@@ -1,7 +1,7 @@
 import app from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/database';
+import 'firebase/firestore';
 import {config} from '../../Constants/firebase_config';
+import * as COLLECTIONS from '../../Constants/firebase_collections';
 
 class Firebase {
   constructor() {
@@ -9,44 +9,40 @@ class Firebase {
 
     /* Helper */
 
-    this.serverValue = app.database.ServerValue;
+    // this.serverValue = app.database.ServerValue;
 
     /* Firebase APIs */
 
-    this.auth = app.auth();
-    this.db = app.database();
+    this.db = app.firestore();
 
-    /* Social Sign In Method Provider */
-
-    this.googleProvider = new app.auth.GoogleAuthProvider();
-    this.auth.onAuthStateChanged(auth_user => {
-        auth_user? 
-          localStorage.setItem('authuser', JSON.stringify(auth_user))
-          :localStorage.removeItem('authuser');
-      }
-    )
   }
 
-  // *** Auth API ***
-  doSignInWithGoogle = () =>
-    this.auth.signInWithPopup(this.googleProvider);
-
-  doSignOut = () => {
-      this.auth.signOut();
-      window.location = '/';
+  getEventNames = () =>{
+    return this.db.collection(COLLECTIONS.EVENT_COLLECTION).get()
+      .then(
+        collection => {
+          var event_names = collection.docs.map(doc=>doc.id);
+          console.log("event names: " + JSON.stringify(event_names))
+          return event_names;
+        }
+      )
+      .catch(exception => {
+          console.log(exception);
+        }
+      )
   }
-
-  // *** User API ***
-
-  user = (uid) => this.db.ref(`users/${uid}`);
-
-//   users = () => this.db.ref('users');
-
-//   // *** Message API ***
-
-//   message = uid => this.db.ref(`messages/${uid}`);
-
-//   messages = () => this.db.ref('messages');
+  
+  getEventDetails = (name) => {
+    return this.db.collection(COLLECTIONS.EVENT_COLLECTION).doc(name).get()
+      .then(doc => {
+          if(!doc.exists){
+            throw "event_does_not_exist";
+          }
+          window.localStorage.setItem(`event_${name}`, JSON.stringify(doc.data()));
+          return JSON.stringify(doc.data());
+        }
+      )
+  }
 }
 
 export default Firebase;
