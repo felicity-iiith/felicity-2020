@@ -1,6 +1,7 @@
 import requests
 import csv
 from copy import deepcopy as dc
+from datetime import datetime
 
 import firebase_admin
 from firebase_admin import credentials
@@ -22,8 +23,19 @@ def setToFirebase(data, headings, db):
 
     # proc link
     link = set_data["Image Poster Link"]
-    link = DRIVE_CDN_BASE + link.split("=")[1]
+    try: 
+        link = DRIVE_CDN_BASE + link.split("=")[1]
+    except Exception as e:
+        pass
+
     set_data["Image Poster Link"] = link
+
+    # proc date
+    set_data["Date"] = datetime.strptime(set_data["Date"],"%d/%m/%Y %H:%M:%S")
+    set_data["Timestamp"] = datetime.strptime(set_data["Timestamp"],"%d/%m/%Y %H:%M:%S")
+
+    #proc number
+    set_data["POCs"] = list(map(lambda dic: dict(zip(dic.keys(), [dic["Name"], int(dic["Phone"])])), set_data["POCs"]))
 
     #send to firebase
     doc = db.collection(COLLECTION).document(set_data['Name'])
