@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import { compose } from 'recompose';
+import { withRouter } from 'react-router-dom';
+import { withFirebase } from '../../Firebase';
+
 import "./Event.scss";
 import mandalaQuarter from '../../../assets/images/mandala-quarter.png';
 import mandalaHalf from '../../../assets/images/mandala-half.png';
@@ -12,16 +16,38 @@ import {basic_world} from 'react-icons-kit/linea/basic_world';
 import Logo from "../Logo/Logo";
 
 
-export default class Event extends Component {
+class EventBase extends Component {
+    constructor(props){
+        super(props);
 
+        this.state={event_details: null};
+    }
     componentDidMount() {
         // fetch some data from firebase using
         // this.props.match.url
+        let event_name = this.props.match.params["name"];
+        console.log("ads" + event_name);
+        if(event_name == null) {
+            this.props.history.push("/events");
+            return;
+        }
+
+        this.props.firebase.getEventDetails(event_name)
+            .then(event_details=>{
+                    this.setState({event_details: event_details})
+                    console.log(event_details);
+                }
+            )
+            .catch(exception => {
+                console.log(exception);
+                this.props.history.push("/events");
+            });
     }
 
     render() {
         return (
             <section className="section-event">
+                <p>{this.state["event_details"]}</p>
                 <Logo />
                 <div className="section-event--page">
                     <img src={mandalaQuarter} alt="Mandala" className="mandala mandala__topright"/>
@@ -75,3 +101,10 @@ export default class Event extends Component {
         )
     }
 }
+
+const Event = compose(
+    withRouter,
+    withFirebase,
+  )(EventBase);
+
+export default Event;
