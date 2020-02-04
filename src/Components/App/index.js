@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
+import { Switch, BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 
 // import Navigation from '../Navigation';
 // import LandingPage from '../Landing';
@@ -36,7 +36,7 @@ const App = () => (
         <Route path={ROUTES.SPONSORS} component={Sponsors} />
         <Route path={ROUTES.EVENTS} component={Events} />
         <Route path={ROUTES.EVENT_NAME} component={Event} />
-        <Route path={ROUTES.EVENT} component={Event} />
+        <Route path={ROUTES.EVENT} component={Events} />
         <Route path={ROUTES.CONTACT} component={Contact} />
         <Route path={ROUTES.TEAM} component={Team} />
         {/* <Route path={ROUTES.ADMIN} component={Admin} /> */}

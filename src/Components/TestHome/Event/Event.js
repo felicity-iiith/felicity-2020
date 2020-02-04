@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { compose } from 'recompose';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Redirect } from 'react-router-dom';
 import { withFirebase } from '../../Firebase';
+import * as ROUTES from '../../../Constants/routes';
 
 import "./Event.scss";
 import mandalaQuarter from '../../../assets/images/mandala-quarter.png';
@@ -23,14 +24,7 @@ class EventBase extends Component {
         this.state={event_details: null};
     }
     componentDidMount() {
-        // fetch some data from firebase using
-        // this.props.match.url
         let event_name = this.props.match.params["name"];
-        console.log("ads" + event_name);
-        if(event_name == null) {
-            this.props.history.push("/events");
-            return;
-        }
 
         this.props.firebase.getEventDetails(event_name)
             .then(event_details=>{
@@ -45,6 +39,7 @@ class EventBase extends Component {
     }
 
     render() {
+
         return (
             <section className="section-event">
                 <p>{this.state["event_details"]}</p>
