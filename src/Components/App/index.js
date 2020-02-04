@@ -36,7 +36,7 @@ const App = () => (
         <Route path={ROUTES.SPONSORS} component={Sponsors} />
         <Route path={ROUTES.EVENTS} component={Events} />
         <Route path={ROUTES.EVENT_NAME} component={Event} />
-        <Route path={ROUTES.EVENT} component={Events} />
+        {/* <Route path={ROUTES.EVENT} component={Events} /> */}
         <Route path={ROUTES.CONTACT} component={Contact} />
         <Route path={ROUTES.TEAM} component={Team} />
         {/* <Route path={ROUTES.ADMIN} component={Admin} /> */}

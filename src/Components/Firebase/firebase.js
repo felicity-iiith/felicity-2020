@@ -38,7 +38,6 @@ class Firebase {
           if(!doc.exists){
             throw "event_does_not_exist";
           }
-          window.localStorage.setItem(`event_${name}`, JSON.stringify(doc.data()));
           return JSON.stringify(doc.data());
         }
       )
