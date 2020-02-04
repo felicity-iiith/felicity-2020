@@ -15,6 +15,7 @@ import {ic_location_on} from 'react-icons-kit/md/ic_location_on';
 import {basic_smartphone} from 'react-icons-kit/linea/basic_smartphone';
 import {basic_world} from 'react-icons-kit/linea/basic_world';
 import Logo from "../Logo/Logo";
+import Spinner from '../Spinner/Spinner';
 
 
 class EventBase extends Component {
@@ -48,6 +49,12 @@ class EventBase extends Component {
             var date_time = this.toDateTime(this.state["event_details"]["Date"]["seconds"]);
             var month = "Feb";
             console.log(date_time);
+            var POCs = this.state.event_details.POCs.map((poc)=>{
+                return(<div className="box__poc">
+                    <p className="box__poc--name">{poc["Name"]}</p>
+                    <p className="box__poc--number">+91 {poc["Phone"]}</p>
+                </div>)
+            });
             return (
                 <section className="section-event">
                     <p></p>
@@ -88,21 +95,14 @@ class EventBase extends Component {
                             </div>
                             <div className="box">
                                 <Icon className="box__icon" icon={basic_smartphone} size={64} />
-                                <div className="box__poc">
-                                    <p className="box__poc--name">{this.state["event_details"]["POCs"][0]["Name"]}</p>
-                                    <p className="box__poc--number">+91 {this.state["event_details"]["POCs"][0]["Phone"]}</p>
-                                </div>
-                                <div className="box__poc">
-                                    <p className="box__poc--name">{this.state["event_details"]["POCs"][1]["Name"]}</p>
-                                    <p className="box__poc--number">+91 {this.state["event_details"]["POCs"][1]["Phone"]}</p>
-                                </div>
+                                {POCs}
                             </div>
                         </div>
                     </div>
                 </section>
             )
         }
-        else return <div></div>
+        else return <Spinner />
         
     }
 }
