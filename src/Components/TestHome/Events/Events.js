@@ -16,7 +16,10 @@ class EventsBase extends Component {
 
     componentDidMount(){
         this.props.firebase.getEventNames()
-            .then(data=>this.setState({events: data, is_loaded:true}));
+            .then(data=>{
+                this.setState({events: data, is_loaded:false});
+                this.formatEvents();
+            });
     }
     toDateTime(secs) {
         var t = new Date(1970, 0, 1); // Epoch
@@ -24,24 +27,38 @@ class EventsBase extends Component {
         return t;
     }
 
+    sortEvents(events){
+        events.sort((e1, e2) =>{
+            let t1 = parseInt(e1.date["seconds"]);
+            let t2 = parseInt(e2.date["seconds"])
+            return t1>t2? 1:-1;
+        })
+        return events;
+    }
+
+    formatEvents(){
+        console.log(this.state.events);
+        let sorted_events = this.sortEvents(this.state.events);
+
+        const events = sorted_events.map(event =>{
+            var date_time = this.toDateTime(event.date["seconds"]);
+            var date = date_time.getDate() + " Feb";
+            return (<div className="event__box">
+                <div className="event__box--circle" />
+                    <Link to={`${event.link}`} className="event__link">
+                        <div className="event__box--text">
+                            <h1 className="event__title">{event.title}</h1>
+                            <p className="event__details">{date}</p>
+                        </div>
+                    </Link>
+            </div>
+        )});
+        this.setState({events: events, is_loaded:true});
+    }
+
     render() {
         if(!this.state["is_loaded"]) return <div></div>
         else{
-            const eventUrl = "felicity.iiit.ac.in";
-            const events = this.state.events.map(event =>{
-                var date_time = this.toDateTime(event.date["seconds"]);
-                var date = date_time.getDate() + " Feb";
-                return (<div className="event__box">
-                    <div className="event__box--circle" />
-                        <Link to={`${event.link}`} className="event__link">
-                            <div className="event__box--text">
-                                <h1 className="event__title">{event.title}</h1>
-                                <p className="event__details">{date}</p>
-                            </div>
-                        </Link>
-                </div>
-            )});
-            console.log(events)
             return (
                 <Fragment>
                     <Logo />
@@ -60,7 +77,7 @@ class EventsBase extends Component {
                         </div>
                         <div className="sitar">
                             <div className="sitar__string">
-                                {events}
+                                {this.state.events}
                             </div>
                         </div>
                     </section>
