@@ -21,14 +21,14 @@ class EventBase extends Component {
     constructor(props){
         super(props);
 
-        this.state={event_details: null};
+        this.state={event_details: null, is_loaded:false};
     }
     componentDidMount() {
         let event_name = this.props.match.params["name"];
 
         this.props.firebase.getEventDetails(event_name)
             .then(event_details=>{
-                    this.setState({event_details: event_details})
+                    this.setState({event_details: JSON.parse(event_details), is_loaded:true})
                     console.log(event_details);
                 }
             )
@@ -37,63 +37,73 @@ class EventBase extends Component {
                 this.props.history.push("/events");
             });
     }
+    toDateTime(secs) {
+        var t = new Date(1970, 0, 1); // Epoch
+        t.setSeconds(secs);
+        return t;
+    }
 
     render() {
-
-        return (
-            <section className="section-event">
-                <p>{this.state["event_details"]}</p>
-                <Logo />
-                <div className="section-event--page">
-                    <img src={mandalaQuarter} alt="Mandala" className="mandala mandala__topright"/>
-                    <img src={mandalaHalf} alt="Mandala" className="mandala mandala__center"/>
-                    <div className="heading-event">
-                        <h1 className="heading-event__title">
-                            Web Dev Workshop
-                        </h1>
-                        <h4 className="heading-event__subtitle">
-                            Workshops
-                        </h4>
-                    </div>
-                    <div className="description">
-                        <div className="description__text">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora omnis quod similique officia. Voluptatem accusamus numquam hic officiis maxime, eaque dolores eos eveniet architecto minus saepe similique accusantium, animi nesciunt!
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora omnis quod similique officia. Voluptatem accusamus numquam hic officiis maxime, eaque dolores eos eveniet architecto minus saepe similique accusantium, animi nesciunt!
+        if(this.state["is_loaded"]){
+            var date_time = this.toDateTime(this.state["event_details"]["Date"]["seconds"]);
+            var month = "Feb";
+            console.log(date_time);
+            return (
+                <section className="section-event">
+                    <p></p>
+                    <Logo />
+                    <div className="section-event--page">
+                        <img src={mandalaQuarter} alt="Mandala" className="mandala mandala__topright"/>
+                        <img src={mandalaHalf} alt="Mandala" className="mandala mandala__center"/>
+                        <div className="heading-event">
+                            <h1 className="heading-event__title">
+                                {this.state["event_details"]["Name"]}
+                            </h1>
+                            <h4 className="heading-event__subtitle">
+                                {this.state["event_details"]["Subheading"]}
+                            </h4>
                         </div>
-                    </div>
-                </div>
-
-
-                <div className="section-event--page">
-                    <img src={mandalaQuarter} alt="Mandala" className="mandala mandala__bottomright"/>
-                    <div className="details">
-                        <div className="box">
-                            <Icon className="box__icon" icon={basic_elaboration_calendar_flagged} size={64} />
-                            <p>8th Feb</p>
-                        </div>
-                        <div className="box">
-                            <Icon className="box__icon" icon={basic_clock} size={64} />
-                            <p>12:00 PM</p>
-                        </div>
-                        <div className="box">
-                            <Icon className="box__icon" icon={basic_world} size={64} />
-                            <p>Himalaya 105, IIIT Hyderabad</p>
-                        </div>
-                        <div className="box">
-                            <Icon className="box__icon" icon={basic_smartphone} size={64} />
-                            <div className="box__poc">
-                                <p className="box__poc--name">banda1</p>
-                                <p className="box__poc--number">+91131231231</p>
-                            </div>
-                            <div className="box__poc">
-                                <p className="box__poc--name">banda2</p>
-                                <p className="box__poc--number">+91131231239</p>
+                        <div className="description">
+                            <div className="description__text">
+                                {this.state["event_details"]["Description"]}
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        )
+
+
+                    <div className="section-event--page">
+                        <img src={mandalaQuarter} alt="Mandala" className="mandala mandala__bottomright"/>
+                        <div className="details">
+                            <div className="box">
+                                <Icon className="box__icon" icon={basic_elaboration_calendar_flagged} size={64} />
+                                <p>{date_time.getDate()} {month}</p>
+                            </div>
+                            <div className="box">
+                                <Icon className="box__icon" icon={basic_clock} size={64} />
+                                <p>{date_time.getHours()>=12? date_time.getHours()-12:date_time.getHours()}:{date_time.getMinutes()} {date_time.getHours()>=12? "PM":"AM"}</p>
+                            </div>
+                            <div className="box">
+                                <Icon className="box__icon" icon={basic_world} size={64} />
+                                <p>{this.state["event_details"]["Venue"]}</p>
+                            </div>
+                            <div className="box">
+                                <Icon className="box__icon" icon={basic_smartphone} size={64} />
+                                <div className="box__poc">
+                                    <p className="box__poc--name">{this.state["event_details"]["POCs"][0]["Name"]}</p>
+                                    <p className="box__poc--number">+91 {this.state["event_details"]["POCs"][0]["Phone"]}</p>
+                                </div>
+                                <div className="box__poc">
+                                    <p className="box__poc--name">{this.state["event_details"]["POCs"][1]["Name"]}</p>
+                                    <p className="box__poc--number">+91 {this.state["event_details"]["POCs"][1]["Phone"]}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            )
+        }
+        else return <div></div>
+        
     }
 }
 
