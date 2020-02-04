@@ -15,6 +15,7 @@ import {ic_location_on} from 'react-icons-kit/md/ic_location_on';
 import {basic_smartphone} from 'react-icons-kit/linea/basic_smartphone';
 import {basic_world} from 'react-icons-kit/linea/basic_world';
 import Logo from "../Logo/Logo";
+import Spinner from '../Spinner/Spinner';
 
 
 class EventBase extends Component {
@@ -102,7 +103,7 @@ class EventBase extends Component {
                 </section>
             )
         }
-        else return <div></div>
+        else return <Spinner />
         
     }
 }
