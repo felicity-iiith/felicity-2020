@@ -11,6 +11,7 @@
         color: $color-white;
         width: 70%;
         margin: 9rem auto;
+        @include respond(phone) { margin: 15rem auto; margin: 12rem auto;}
         text-align: center;
 
         &__primary {

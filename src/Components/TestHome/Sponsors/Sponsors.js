@@ -22,7 +22,6 @@ import TalentSprint from "../../../assets/images/sponsors/talentsprint.png";
 import SarathCity from "../../../assets/images/sponsors/sarathcity.png";
 import SBI from "../../../assets/images/sponsors/sbi_logo.png";
 import Spectal from "../../../assets/images/sponsors/Spectal-5.1.jpg";
-import TLT from "../../../assets/images/sponsors/TLT.png";
 
 
 
@@ -42,7 +41,6 @@ class Sponsors extends Component {
             {'weight' : 'Flashmob Partner' , 'img' : SarathCity, 'link' : 'http://sarathcitycapitalmall.com/'},
             {'weight' : 'Banking Partner' , 'img' : SBI, 'link' : 'https://sbi.co.in/'},
             {'weight' : 'Singularity Partner' , 'img' : Spectal, 'link' : 'https://www.spectalmanagement.com/'},
-            // {'weight' : 'Singularity Partner' , 'img' : TLT, 'link' : 'http://www.thelocaltrain.com/'},
         ]     
     }
 

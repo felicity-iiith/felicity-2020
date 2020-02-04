@@ -36,9 +36,7 @@
             width: 100%;
             height: auto;
             transition: all .2s;
-            @include respond(phone) {
-                filter: blur(1px) brightness(60%);
-            }
+            
         }
 
         &:hover img {
@@ -57,10 +55,11 @@
             opacity: 0;
             font-size: 3rem;
             @include respond(phone) { 
-                font-size: 2.5rem; 
-                opacity: 1;
-                color: $color-black;
-                transform: translate(-50%, 80%); 
+                // font-size: 2.5rem; 
+                // opacity: 1;
+                // color: $color-black;
+                // transform: translate(-50%, 80%); 
+                display: none;
             }
             transition: all .3s;
         }

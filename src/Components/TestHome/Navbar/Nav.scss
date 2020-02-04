@@ -11,6 +11,7 @@
         position: fixed;
         top: 5rem;
         right: 5rem;
+        @include respond(phone) { top: 3rem; right: 3rem;}
         width: 7rem;
         height: 7rem;
         border-radius: 50%;
@@ -28,6 +29,7 @@
         position: fixed;
         top: 5.5rem;
         right: 5.5rem;
+        @include respond(phone) { top: 3.5rem; right: 3.5rem;}
         background-image: radial-gradient(rgba($color-gradient-primary, 1), rgba($color-gradient-secondary, 1));
         z-index: 59;
         transition: all 0.5s;
@@ -43,7 +45,11 @@
         @include respond(desktop) { background-size: 70%; }
         @include respond(tab-land) { background-size: 90%;}
         @include respond(tab-port) { background-size: 95%;}
-        @include respond(phone) { background-size: 130%;}
+        @include respond(phone) {
+            background: no-repeat url(../../../assets/images/nav/pundit-phone.png);
+            background-size: 100%;
+            background-position: bottom 0rem left 50%;
+        }
     }
 
     &__nav {
@@ -70,7 +76,7 @@
         @include respond(tab-land) { height: 28.5rem;}
         @include respond(tab-port) { height: 26rem; transform: translate(-50%, -45%);}
         @include respond(bada-wala-phone) { height: 23rem; transform: translate(-50%, -10%);}
-        @include respond(phone) { height: 27rem; transform: translate(-50%, -35%);}
+        @include respond(phone) { height: 21rem; transform: translate(-50%, 20%);}
 
         // background-color: red;
         list-style: none;
@@ -90,21 +96,21 @@
             width: 50rem; 
             @include respond(tab-port) { width: 40rem; }
             @include respond(bada-wala-phone) { width: 30rem; }
-            @include respond(phone) { width: 50rem; }
+            @include respond(phone) { width: 20rem; }
             background-image: url(../../../assets/images/nav/stripe-1.png);
         }
         &--2 {
             width: 60rem;
             @include respond(tab-port) { width: 50rem; }
             @include respond(bada-wala-phone) { width: 40rem; }
-            @include respond(phone) { width: 60rem; }
+            @include respond(phone) { width: 30rem; }
             background-image: url(../../../assets/images/nav/stripe-2.png);
         }
         &--3 {
             width: 70rem;
             @include respond(tab-port) { width: 60rem; }
             @include respond(bada-wala-phone) { width: 50rem; }
-            @include respond(phone) { width: 70rem; }
+            @include respond(phone) { width: 40rem; }
             background-image: url(../../../assets/images/nav/stripe-3.png);
         }
     }

@@ -41,6 +41,9 @@ ORDER: Events > Event page > sponsors > WIP > Navbar > Main
     @if $breakpoint == desktop {
         @media(max-width: 93.75em) { @content; } // 1500px
     }
+    @if $breakpoint == thoda-bada-desktop {
+        @media(max-width: 96.875em) { @content; } // 1500px
+    }
 }
 
 
