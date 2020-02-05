@@ -3,12 +3,12 @@ import { compose } from 'recompose';
 import { withRouter } from 'react-router-dom';
 import { withFirebase } from '../../Firebase';
 
-import WorkInProgress from "../../WorkInProgress/WIP";
+import * as CONFIGS from '../../../Constants/configs';
 import {Link} from 'react-router-dom';
 import Logo from "../Logo/Logo";
 import "./Events.scss";
 
-class EventsBase extends Component {
+class EventsD1Base extends Component {
     constructor(props){
         super(props);
         this.state = {events: [], is_loaded:true};
@@ -33,6 +33,17 @@ class EventsBase extends Component {
             let t2 = parseInt(e2.date["seconds"])
             return t1>t2? 1:-1;
         })
+        let tmp = []
+        let date = this.props.match.params["date"];
+        if(parseInt(date)>=CONFIGS.DAYS.length) {
+            console.log(date);
+            this.props.history.push("/events");
+        }
+        for(let i=0;i<events.length;i++){
+            if(parseInt(this.toDateTime(events[i].date["seconds"]).getDate()) == CONFIGS.DAYS[parseInt(date)])
+                tmp.push(events[i]);
+        }
+        events = JSON.parse(JSON.stringify(tmp));
         return events;
     }
 
@@ -64,25 +75,12 @@ class EventsBase extends Component {
                     <Logo />
                     <section class="section-events">
                         <div className="heading">
-                            <h1 className="heading__primary">Events</h1>
-                            <p className="heading__text">
-                                Felicity encompasses and embrace the varied and diverse 
-                                interests of iiith with everyone playing a role.
-                                From nights of music and comedy to codecraft and quizzes,
-                                everybody can explore and engage in their interests.
-                                Felicity provides the perfect platform to showcase your talents in 
-                                an otherwise packed academic schedule. The three days of felicity 
-                                are packed with fun, merriment, and joy and self-discovery.
-                            </p>
+                            <h1 className="heading__primary">{CONFIGS.DAYS[parseInt(this.props.match.params["date"])]}th Feb 2020</h1>
                         </div>
-                        <hr className="heading__separator"/>
-                        <h1 className="heading__secondary">
-                            Checkout our lineup of events on different days !
-                        </h1>
-                        <div className="event-buttons">
-                            <Link to="/eventsondate/0" className="event-button">Day 1</Link>
-                            <Link to="/eventsondate/1" className="event-button">Day 2</Link>
-                            <Link to="/eventsondate/2" className="event-button">Day 3</Link>
+                        <div className="sitar">
+                            <div className="sitar__string">
+                                {this.state.events}
+                            </div>
                         </div>
                     </section>
                 </Fragment>
@@ -91,9 +89,9 @@ class EventsBase extends Component {
     }
 }
 
-const Events = compose(
+const EventsD1 = compose(
     withRouter,
     withFirebase,
-  )(EventsBase);
+  )(EventsD1Base);
 
-export default Events;
+export default EventsD1;
