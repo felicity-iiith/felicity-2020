@@ -20,7 +20,6 @@ def setToFirebase(data, headings, db):
             lis = map(lambda a: a.strip().strip('\n'), set_data["POCs"][i].split(','))
             tmp.append(dict(zip(["Name", "Phone"], lis)))
     
-    print(tmp)
     set_data["POCs"] = tmp
 
     # proc link
@@ -42,7 +41,9 @@ def setToFirebase(data, headings, db):
     #send to firebase
     doc = db.collection(COLLECTION).document(set_data['Name'])
     doc.set(set_data)
-    print(f"{set_data['Name']} added to firebase")
+    
+    with open("log.txt", "a") as fil:
+        fil.write(f"{set_data['Name']} added to firebase\n")
 
 if __name__ == '__main__':
     cred = credentials.Certificate("./key.json")
@@ -77,6 +78,7 @@ if __name__ == '__main__':
 
             idx += 1
         
-        print(f"{idx-1} events processed")
+        with open("log.txt", "a") as fil:
+            fil.write(f"{idx-1} events processed\n")
 
 
