@@ -10,7 +10,6 @@ import kathak_right from "../../assets/images/main/4_right.png";
 
 // videos
 import vid from "../../assets/videos/aftermovie_cut.mp4";
-
 import "../../Styles/_main.scss";
 import "./home.scss";
 
@@ -50,7 +49,7 @@ const Home = () => (
               <span>Culture</span>
             </div> */}
             <div className="app-button">
-              <Link className="download-app">
+              <Link to="/static/app/app-release.apk" className="download-app">
                 <span>
                   Download the app now!
                 </span>
@@ -69,13 +68,13 @@ const Home = () => (
                 <div className="custom-row">
                   <div className="col-1-of-3">
                     <div className="testimonial-card">
-                      <span className="testimonial-card-quote">&ldquo;A good friend of mine perceives a water bottle as empty even when it's full. Don't be him.&rdquo;</span>
+                      <span className="testimonial-card-quote">&ldquo;If there is anything that I remember from my college days, it is my college fest.... Assignments would come and go but the college fest is something that comes only once a year.... Today, what matters even more than subject knowledge is the perspective towards life and that I got from Felicity.&rdquo;</span>
                       <span className="testimonial-card-author">-Shaunak Badani</span>
                     </div>
                   </div>
                   <div className="col-1-of-3">
                     <div className="testimonial-card">
-                      <span className="testimonial-card-quote">&ldquo;If 'The Road Not taken' was written in India, it would go 'I took the road less travelled by, it was then I found out why.'&rdquo;</span>
+                      <span className="testimonial-card-quote">&ldquo;Amongst my friends from other colleges, if there is anything we boast about our college, it is not the placements and attendance policy but our college fest..... Being an undergrad at IIIT hyderabad, I can faithfully say that Felicity is truely an enjoyable college event.'&rdquo;</span>
                       <span className="testimonial-card-author">-Shaunak Badani</span>
                     </div>
                   </div>

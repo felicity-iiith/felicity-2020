@@ -50,10 +50,11 @@ class EventsD1Base extends Component {
     formatEvents(){
         console.log(this.state.events);
         let sorted_events = this.sortEvents(this.state.events);
-
+        
         const events = sorted_events.map(event =>{
             var date_time = this.toDateTime(event.date["seconds"]);
-            var date = `${date_time.getHours()}:${date_time.getMinutes()}`;
+            var minutes = `${date_time.getMinutes()}`.length==1? `0${date_time.getMinutes()}`:`${date_time.getMinutes()}`;
+            var date = `${date_time.getHours()}:${minutes}`;
             return (<div className="event__box">
                 <div className="event__box--circle" />
                     <Link to={`${event.link}`} className="event__link">
