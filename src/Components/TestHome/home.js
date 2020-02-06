@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import Logo from "./Logo/Logo";
 import { SocialIcon } from 'react-social-icons';
 import ReactFullpage from '@fullpage/react-fullpage';
@@ -17,7 +18,6 @@ const Home = () => (
     <main>
       <ReactFullpage
     //fullpage options
-    licenseKey = {'YOUR_KEY_HERE'}
     scrollingSpeed = {1000} /* Options here */
 
     render={({ state, fullpageApi }) => {
@@ -45,9 +45,16 @@ const Home = () => (
             </div>
           </section>
           <section className="section section-theme">
-            <div className="section-theme__text">
+            {/* <div className="section-theme__text">
               <span>Indian</span>
               <span>Culture</span>
+            </div> */}
+            <div className="app-button">
+              <Link className="download-app">
+                <span>
+                  Download the app now!
+                </span>
+              </Link>
             </div>
           </section>
           <section className="section section-testimonials">
@@ -62,19 +69,19 @@ const Home = () => (
                 <div className="custom-row">
                   <div className="col-1-of-3">
                     <div className="testimonial-card">
-                      <span className="testimonial-card-quote">&ldquo;To love is to hate, to fear is to conquer, and other bullshit you can tell yourself&rdquo;</span>
+                      <span className="testimonial-card-quote">&ldquo;A good friend of mine perceives a water bottle as empty even when it's full. Don't be him.&rdquo;</span>
                       <span className="testimonial-card-author">-Shaunak Badani</span>
                     </div>
                   </div>
                   <div className="col-1-of-3">
                     <div className="testimonial-card">
-                      <span className="testimonial-card-quote">&ldquo;To love is to hate, to fear is to conquer, and other bullshit you can tell yourself&rdquo;</span>
+                      <span className="testimonial-card-quote">&ldquo;If 'The Road Not taken' was written in India, it would go 'I took the road less travelled by, it was then I found out why.'&rdquo;</span>
                       <span className="testimonial-card-author">-Shaunak Badani</span>
                     </div>
                   </div>
                   <div className="col-1-of-3">
                     <div className="testimonial-card">
-                      <span className="testimonial-card-quote">&ldquo;To love is to hate, to fear is to conquer, and other bullshit you can tell yourself"</span>
+                      <span className="testimonial-card-quote">&ldquo;Fest to litt hai!&rdquo;</span>
                       <span className="testimonial-card-author">-Shaunak Badani</span>
                     </div>
                   </div>

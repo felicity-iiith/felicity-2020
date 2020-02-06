@@ -176,7 +176,7 @@ $grid-width: 110rem;
     }
 
     &-quote {
-        font-size: 3.7rem;
+        font-size: 3.3rem;
         @include respond(bada-wala-phone) { font-size: 3.4rem; }        
         @include respond(phone) { font-size: 3rem; }        
     }
@@ -228,5 +228,42 @@ $grid-width: 110rem;
 
     &__icon:hover {
         cursor: pointer;
+    }
+}
+
+// APP BUTTON DOWNLOADING
+.app-button {
+    // background-color: orangered;
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 10rem;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .download-app {
+        &:link, 
+        &:visited {
+            text-decoration: none;
+            color: inherit;
+            font-size: 2rem;
+            // background-color: red;
+            background-color: $color-white;
+            // color: $color-white;
+            border-radius: 400px;
+            padding: 1rem 2rem;
+            height: 6rem;
+            width: 30rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+        }
+
     }
 }
