@@ -69,16 +69,11 @@ class EventBase extends Component {
                                 {this.state["event_details"]["Subheading"]}
                             </h4>
                         </div>
-                        <div className="description">
+                        {this.state["event_details"]["Description"]!="0"? <div className="description">
                             <div className="description__text">
                                 {this.state["event_details"]["Description"]}
                             </div>
-                        </div>
-                    </div>
-
-
-                    <div className="section-event--page">
-                        <img src={mandalaQuarter} alt="Mandala" className="mandala mandala__bottomright"/>
+                        </div>:<div></div>}
                         <div className="details">
                             <div className="box">
                                 <Icon className="box__icon" icon={basic_elaboration_calendar_flagged} size={64} />
@@ -97,6 +92,11 @@ class EventBase extends Component {
                                 {POCs}
                             </div>
                         </div>
+                    </div>
+
+
+                    <div className="section-event--page">
+                        <img src={mandalaQuarter} alt="Mandala" className="mandala mandala__bottomright"/>
                     </div>
                 </section>
             )

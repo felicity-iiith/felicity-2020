@@ -1941,3 +1941,57 @@ EDM night added to firebase
 EFI Club event added to firebase
 Merakee Band + The Local Train added to firebase
 27 events processed
+Escape the Room added to firebase
+Treasure Hunt added to firebase
+Bike Stunts Show added to firebase
+Stargazing added to firebase
+Roadblock added to firebase
+Battle of Brains: Subtle Curry Quiz added to firebase
+Lit Charades added to firebase
+Robo Race added to firebase
+Break-in-CTF added to firebase
+Codecraft added to firebase
+Singularity added to firebase
+FAIL! Talks added to firebase
+Parliamentary debate (Day 3) added to firebase
+Footbids added to firebase
+DigiHunt: Bang Head Here added to firebase
+Inaugrals + Standup comedy added to firebase
+Karoke night added to firebase
+Battle of brains: General Quiz added to firebase
+EDM night added to firebase
+EFI Club event added to firebase
+Merakee Band + The Local Train added to firebase
+Parliamentary debate (Day 1) added to firebase
+Parliamentary debate (Day 2) added to firebase
+Potpourri  added to firebase
+Workshop and Danceoff  added to firebase
+Human Library added to firebase
+TLE added to firebase
+Botomania added to firebase
+Code helix added to firebase
+Circuit 'O' Mania added to firebase
+Decode added to firebase
+Ping writing competition added to firebase
+Photography Club competition added to firebase
+Adventure sports: Zipling, rappling added to firebase
+Mela added to firebase
+Sports added to firebase
+Respawn added to firebase
+Arcade (Day 1) added to firebase
+Arcade (Day 2) added to firebase
+Arcade (Day 3) added to firebase
+FIFA (Day 1) added to firebase
+FIFA (Day 2) added to firebase
+Age Of Empires added to firebase
+VR added to firebase
+PUBG competition  added to firebase
+Web Development Workshop  added to firebase
+Simulate to Innovate: The Future Workshop  added to firebase
+Edufabrica workshops (Day 1) added to firebase
+Data Science Workshop  added to firebase
+Competitive Programming Workshop  added to firebase
+Edufabrica workshops (Day 2) added to firebase
+CodeStreet Workshop added to firebase
+Humane Society International: Animal Rights added to firebase
+53 events processed

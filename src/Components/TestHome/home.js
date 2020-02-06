@@ -49,11 +49,11 @@ const Home = () => (
               <span>Culture</span>
             </div> */}
             <div className="app-button">
-              <Link to="/static/app/app-release.apk" className="download-app">
+              <a href="/static/app/app-release.apk" className="download-app">
                 <span>
                   Download the app now!
                 </span>
-              </Link>
+              </a>
             </div>
           </section>
           <section className="section section-testimonials">
