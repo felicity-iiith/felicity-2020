@@ -1,5 +1,4 @@
 #!/bin/bash
-pip install -r requirements.txt
 
 if [ $# -lt "1" ]
 then
