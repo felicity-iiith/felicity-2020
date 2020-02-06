@@ -23,6 +23,77 @@
             font-size: 3rem;
             margin-top: 3rem;
         }
+
+        &__separator { 
+            background-color: $color-white;
+            width: 50%;
+            margin: 2rem auto;
+        }
+
+        &__secondary {
+            color: $color-white;
+            margin: 2rem auto;
+            width: 65%;
+            text-align: center;
+            font-size: 5rem;
+            @include respond(phone) { font-size: 3rem; }
+        }
+    }
+}
+
+.event {
+    &-buttons { 
+        // background-color: red;
+        height: 30rem;
+        width: 70%;
+        margin: 1rem auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include respond(tab-port) {
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 50rem;
+        }
+    }
+
+    &-button {
+        &:link, 
+        &:visited {
+            height: 6rem;
+            width: 20%;
+            vertical-align: middle;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include respond(tab-port) {
+                height: 10rem;
+                width: 10rem;
+                border-radius: 50%;
+            }
+            font-size: 3rem;
+
+            // button styling
+            border: 2px solid orangered;
+            background-color: transparent;
+            border-radius: 400px;
+            color: $color-white;
+            transition: all 0.2s;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            color: $generic-background-color;
+            background-color: $color-white;
+            color: orangered;
+            border: 2px solid $color-white;
+        }
+
     }
 }
 
@@ -111,7 +182,7 @@
             padding: 2rem 1rem;
             background-color: $color-white;
             // background-color: rgba($color-white, 0.2);
-            width: 30rem;
+            width: 45rem;
             @include respond(desktop) { width: 25rem; }
             @include respond(tab-port) { width: 20rem; }
             border-radius: 1rem;
@@ -130,9 +201,9 @@
     }
 
     &__title {
-        font-size: 5rem;
-        @include respond(desktop) { font-size: 4rem; }
-        @include respond(tab-land) { font-size: 3rem; }
+        font-size: 4rem;
+        @include respond(desktop) { font-size: 3rem; }
+        @include respond(tab-land) { font-size: 2.5rem; }
         line-height: 4.5rem;
     }
     

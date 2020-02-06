@@ -11,17 +11,18 @@ import "./Sponsors.scss";
 
 // Sponsor images
 import Qualcomm from "../../../assets/images/sponsors/qualcomm.jpg";
-import AICrowd from "../../../assets/images/sponsors/aicrowd.png";
-import Ajio from "../../../assets/images/sponsors/Ajio.svg";
+import AICrowd from "../../../assets/images/sponsors/AICrowd.png";
+import Ajio from "../../../assets/images/sponsors/AJIO.png";
 import EduFabrica from "../../../assets/images/sponsors/edufabrica.png";
-import HelloIntern from "../../../assets/images/sponsors/hellointern.png";
-import Internshala from "../../../assets/images/sponsors/internshaala.svg";
+import HelloIntern from "../../../assets/images/sponsors/HelloINtern.png";
+import Internshala from "../../../assets/images/sponsors/internshala.png";
 import Jrny from "../../../assets/images/sponsors/jrny.png";
-import Monster from "../../../assets/images/sponsors/monster.jpg";
-import TalentSprint from "../../../assets/images/sponsors/talentsprint.png";
+import Monster from "../../../assets/images/sponsors/monster.png";
+import TalentSprint from "../../../assets/images/sponsors/Talent-Sprint.png";
 import SarathCity from "../../../assets/images/sponsors/sarathcity.png";
-import SBI from "../../../assets/images/sponsors/sbi_logo.png";
-import Spectal from "../../../assets/images/sponsors/Spectal-5.1.jpg";
+import SBI from "../../../assets/images/sponsors/SBI.png";
+import Spectal from "../../../assets/images/sponsors/spectral.png";
+import foxmula from "../../../assets/images/sponsors/foxmula.png";
 
 
 
@@ -35,6 +36,7 @@ class Sponsors extends Component {
             {'weight' : 'Workshop Partner' , 'img' : EduFabrica, 'link' : 'https://www.edufabrica.net/'},
             {'weight' : 'Media Partner' , 'img' : HelloIntern, 'link' : 'https://www.hellointern.com/'},
             {'weight' : 'Internship and Trainings Partner' , 'img' : Internshala, 'link' : 'https://internshala.com/'},
+            {'weight' : 'Internship Partner' , 'img' : foxmula, 'link' : 'https://internship.felicity.iiit.ac.in/'},
             {'weight' : 'Artist Partner' , 'img' : Jrny, 'link' : 'http://www.jrnyentertainments.com/'},
             {'weight' : 'Energy Partner' , 'img' : Monster, 'link' : 'https://www.monsterenergy.com/'},
             {'weight' : 'Threads Title Sponsor' , 'img' : TalentSprint, 'link' : 'https://talentsprint.com/'},

@@ -66,7 +66,7 @@ class EventsBase extends Component {
                         <div className="heading">
                             <h1 className="heading__primary">Events</h1>
                             <p className="heading__text">
-                                Felicity encompasses and embraces the varied and diverse 
+                                Felicity encompasses and embrace the varied and diverse 
                                 interests of iiith with everyone playing a role.
                                 From nights of music and comedy to codecraft and quizzes,
                                 everybody can explore and engage in their interests.
@@ -75,10 +75,14 @@ class EventsBase extends Component {
                                 are packed with fun, merriment, and joy and self-discovery.
                             </p>
                         </div>
-                        <div className="sitar">
-                            <div className="sitar__string">
-                                {this.state.events}
-                            </div>
+                        <hr className="heading__separator"/>
+                        <h1 className="heading__secondary">
+                            Checkout our lineup of events on different days !
+                        </h1>
+                        <div className="event-buttons">
+                            <Link to="/eventsondate/0" className="event-button">Day 1</Link>
+                            <Link to="/eventsondate/1" className="event-button">Day 2</Link>
+                            <Link to="/eventsondate/2" className="event-button">Day 3</Link>
                         </div>
                     </section>
                 </Fragment>
