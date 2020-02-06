@@ -49,9 +49,10 @@ class EventBase extends Component {
             var month = "Feb";
             console.log(date_time);
             var POCs = this.state.event_details.POCs.map((poc)=>{
+                var phone = ()=>(<p className="box__poc--number">+91 {poc["Phone"]}</p>);
                 return(<div className="box__poc">
                     <p className="box__poc--name">{poc["Name"]}</p>
-                    <p className="box__poc--number">+91 {poc["Phone"]}</p>
+                    {phone}
                 </div>)
             });
             return (
