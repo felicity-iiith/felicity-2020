@@ -33,12 +33,15 @@ class Firebase {
   }
   
   getEventDetails = (name) => {
+    console.log(name);
     return this.db.collection(COLLECTIONS.EVENT_COLLECTION).doc(name).get()
       .then(doc => {
           if(!doc.exists){
             throw "event_does_not_exist";
           }
-          return JSON.stringify(doc.data());
+
+          console.log(doc.data());
+          return doc.data();
         }
       )
   }
