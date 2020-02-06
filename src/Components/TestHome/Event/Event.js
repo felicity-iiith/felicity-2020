@@ -28,7 +28,7 @@ class EventBase extends Component {
         let event_name = this.props.match.params["name"];
         this.props.firebase.getEventDetails(event_name)
             .then(event_details=>{
-                    this.setState({event_details: JSON.parse(event_details), is_loaded:true})
+                    this.setState({event_details: event_details, is_loaded:true})
                     console.log(event_details);
                 }
             )
