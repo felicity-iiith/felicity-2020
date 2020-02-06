@@ -23,6 +23,8 @@ import SarathCity from "../../../assets/images/sponsors/sarathcity.png";
 import SBI from "../../../assets/images/sponsors/SBI.png";
 import Spectal from "../../../assets/images/sponsors/spectral.png";
 import foxmula from "../../../assets/images/sponsors/foxmula.png";
+import Rapido from "../../../assets/images/sponsors/rapido.png";
+import RedFm from "../../../assets/images/sponsors/redfm.png";
 
 
 
@@ -43,6 +45,8 @@ class Sponsors extends Component {
             {'weight' : 'Flashmob Partner' , 'img' : SarathCity, 'link' : 'http://sarathcitycapitalmall.com/'},
             {'weight' : 'Banking Partner' , 'img' : SBI, 'link' : 'https://sbi.co.in/'},
             {'weight' : 'Singularity Partner' , 'img' : Spectal, 'link' : 'https://www.spectalmanagement.com/'},
+            {'weight' : 'Bike and Taxi Partner' , 'img' : Rapido, 'link' : 'https://rapido.bike/'},
+            {'weight' : 'Radio Partner' , 'img' : RedFm, 'link' : 'https://www.redfmindia.in/'},
         ]     
     }
 
