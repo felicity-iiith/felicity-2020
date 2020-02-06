@@ -53,7 +53,7 @@ class EventsD1Base extends Component {
 
         const events = sorted_events.map(event =>{
             var date_time = this.toDateTime(event.date["seconds"]);
-            var date = date_time.getDate() + " Feb";
+            var date = `${date_time.getHours()}:${date_time.getMinutes()}`;
             return (<div className="event__box">
                 <div className="event__box--circle" />
                     <Link to={`${event.link}`} className="event__link">
