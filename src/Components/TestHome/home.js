@@ -69,13 +69,13 @@ const Home = () => (
                   <div className="col-1-of-3">
                     <div className="testimonial-card">
                       <span className="testimonial-card-quote">&ldquo;If there is anything that I remember from my college days, it is my college fest.... Assignments would come and go but the college fest is something that comes only once a year.... Today, what matters even more than subject knowledge is the perspective towards life and that I got from Felicity.&rdquo;</span>
-                      <span className="testimonial-card-author">-Shaunak Badani</span>
+                      <span className="testimonial-card-author">-Raj Maheshwari</span>
                     </div>
                   </div>
                   <div className="col-1-of-3">
                     <div className="testimonial-card">
                       <span className="testimonial-card-quote">&ldquo;Amongst my friends from other colleges, if there is anything we boast about our college, it is not the placements and attendance policy but our college fest..... Being an undergrad at IIIT hyderabad, I can faithfully say that Felicity is truely an enjoyable college event.'&rdquo;</span>
-                      <span className="testimonial-card-author">-Shaunak Badani</span>
+                      <span className="testimonial-card-author">-Sai Teja Reddy</span>
                     </div>
                   </div>
                   <div className="col-1-of-3">

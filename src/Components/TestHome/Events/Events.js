@@ -83,6 +83,7 @@ class EventsBase extends Component {
                             <Link to="/eventsondate/0" className="event-button">Day 1</Link>
                             <Link to="/eventsondate/1" className="event-button">Day 2</Link>
                             <Link to="/eventsondate/2" className="event-button">Day 3</Link>
+                            <Link to="/eventsondate/3" className="event-button">All Day</Link>
                         </div>
                     </section>
                 </Fragment>

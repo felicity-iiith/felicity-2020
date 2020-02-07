@@ -176,9 +176,9 @@ $grid-width: 110rem;
     }
 
     &-quote {
-        font-size: 3.3rem;
-        @include respond(bada-wala-phone) { font-size: 3.4rem; }        
-        @include respond(phone) { font-size: 3rem; }        
+        font-size: 2rem;
+        @include respond(bada-wala-phone) { font-size: 2rem; }        
+        @include respond(phone) { font-size: 1.5rem; }        
     }
 
     &-author {

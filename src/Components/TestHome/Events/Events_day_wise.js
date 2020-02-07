@@ -54,13 +54,15 @@ class EventsD1Base extends Component {
         const events = sorted_events.map(event =>{
             var date_time = this.toDateTime(event.date["seconds"]);
             var minutes = `${date_time.getMinutes()}`.length==1? `0${date_time.getMinutes()}`:`${date_time.getMinutes()}`;
-            var date = `${date_time.getHours()}:${minutes}`;
+            var time = `${date_time.getHours()}:${minutes}`;
+            let day = CONFIGS.DAYS[parseInt(this.props.match.params["date"])];
+            if(day=="6") time = "";
             return (<div className="event__box">
                 <div className="event__box--circle" />
                     <Link to={`${event.link}`} className="event__link">
                         <div className="event__box--text">
                             <h1 className="event__title">{event.title}</h1>
-                            <p className="event__details">{date}</p>
+                            <p className="event__details">{time}</p>
                         </div>
                     </Link>
             </div>
@@ -71,12 +73,15 @@ class EventsD1Base extends Component {
     render() {
         if(!this.state["is_loaded"]) return <div></div>
         else{
+            let day = CONFIGS.DAYS[parseInt(this.props.match.params["date"])];
+            var date = day + "th Feb 2020";
+            if(day=="6") date = "All Day Event";
             return (
                 <Fragment>
                     <Logo />
                     <section class="section-events">
                         <div className="heading">
-                            <h1 className="heading__primary">{CONFIGS.DAYS[parseInt(this.props.match.params["date"])]}th Feb 2020</h1>
+                            <h1 className="heading__primary">{date}</h1>
                         </div>
                         <div className="sitar">
                             <div className="sitar__string">

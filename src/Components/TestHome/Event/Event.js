@@ -78,7 +78,7 @@ class EventBase extends Component {
                         <div className="details">
                             <div className="box">
                                 <Icon className="box__icon" icon={basic_elaboration_calendar_flagged} size={64} />
-                                <p>{date_time.getDate()} {month}</p>
+                                <p>{date_time.getDate()==6? "All Day Event":date_time.getDate()+" "+month}</p>
                             </div>
                             <div className="box">
                                 <Icon className="box__icon" icon={basic_clock} size={64} />
