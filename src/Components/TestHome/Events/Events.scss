@@ -101,6 +101,7 @@
     & {
         height: 500vh;
         background-image: url(../../../assets/images/events/sitar.png);
+        // background-image: url(../../../assets/images/events/sitar-1.5x.png);
         background-size: contain;
         background-repeat: no-repeat;
         width: 50%;
@@ -196,6 +197,7 @@
 
             &:hover {
                 transform: translate(50%, -51%) scale(1.1);
+                @include respond(phone) { transform: translate(50%, -50%); }
             }
         }
     }
