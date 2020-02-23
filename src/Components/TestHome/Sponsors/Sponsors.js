@@ -21,10 +21,11 @@ import Monster from "../../../assets/images/sponsors/monster.png";
 import TalentSprint from "../../../assets/images/sponsors/Talent-Sprint.png";
 import SarathCity from "../../../assets/images/sponsors/sarathcity.png";
 import SBI from "../../../assets/images/sponsors/SBI.png";
-import Spectal from "../../../assets/images/sponsors/spectral.png";
+// import Spectal from "../../../assets/images/sponsors/spectral.png";
 import foxmula from "../../../assets/images/sponsors/foxmula.png";
 import Rapido from "../../../assets/images/sponsors/rapido.png";
 import RedFm from "../../../assets/images/sponsors/redfm.png";
+import Winkies from "../../../assets/images/sponsors/winkies.png";
 
 
 
@@ -44,7 +45,7 @@ class Sponsors extends Component {
             {'weight' : 'Threads Title Sponsor' , 'img' : TalentSprint, 'link' : 'https://talentsprint.com/'},
             {'weight' : 'Flashmob Partner' , 'img' : SarathCity, 'link' : 'http://sarathcitycapitalmall.com/'},
             {'weight' : 'Banking Partner' , 'img' : SBI, 'link' : 'https://sbi.co.in/'},
-            {'weight' : 'Singularity Partner' , 'img' : Spectal, 'link' : 'https://www.spectalmanagement.com/'},
+            {'weight' : 'Cake Specialist Partner' , 'img' : Winkies, 'link' : 'http://winkies.co.in/'},
             {'weight' : 'Bike and Taxi Partner' , 'img' : Rapido, 'link' : 'https://rapido.bike/'},
             {'weight' : 'Radio Partner' , 'img' : RedFm, 'link' : 'https://www.redfmindia.in/'},
         ]     
